@@ -32,6 +32,10 @@
 
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
+  --color-ocean: #002B5B;
+  --color-magma: #EA5455;
+  --color-light: #F2F2F2FF;
+  --color-dark: #181818;
 
   --section-gap: 160px;
 }
