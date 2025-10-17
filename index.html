@@ -11,31 +11,31 @@
     />
     <link
       rel="shortcut icon"
-      href="./assets/icons/hz-negative.svg"
+      href="./assets/icons/hz-dark.svg"
       width="32"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./main.css" />
     <title>Hunafa Zaky</title>
   </head>
   <body>
+    <!-- Navbar -->
     <nav>
-      <div>
+      <div class="main-logo">
         <a href="#">
-          <img src="./assets/icons/hz-negative.svg" alt="hunafazaky logo" />
+          <img src="./assets/icons/hz-dark.svg" alt="hunafazaky logo" />
         </a>
       </div>
-      <div>
+      <div class="main-menu">
         <ul>
-          <li><a href="#home">Home</a></li>
           <li><a href="#about-me">About me</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
+    <!-- Header -->
     <header>
       <div class="hero">
         <div class="hero-part left">
@@ -43,56 +43,65 @@
           <h4>Front-end Developer | Data Analyst</h4>
         </div>
         <div class="hero-part right">
-          <!-- <p>Web Developer | Programmer | Tech Enthusiast</p> -->
-          <img src="./assets/images/zani.png" alt="working" />
+          <img src="./assets/images/zani.webp" alt="working" />
         </div>
       </div>
     </header>
-    <section id="home">
-      <h2>Hello World</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
-        expedita deserunt reprehenderit nihil esse voluptatem temporibus
-        repellendus est. Unde suscipit eveniet maxime repudiandae expedita illum
-        repellendus, sunt id aut atque.
-      </p>
-    </section>
-    <section id="about-me">
-      <h2>About me</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laboriosam
-        autem eos ipsum natus! Impedit, fugiat vel! Aut quae illo consectetur
-        aspernatur voluptates blanditiis labore exercitationem veniam, non saepe
-        tempora!
-      </p>
-    </section>
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node.js</li>
-      </ul>
-    </section>
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <a href="./projects/web-qr-code/index.html">Web QR</a>
-        </li>
-      </ul>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, minima,
-        error dolorum velit sit aliquid aut temporibus accusamus amet facere
-        doloremque exercitationem magnam debitis a quo optio eligendi. Nihil,
-        magni.
-        <a href="mailto:hunafa@example.com">hunafa.zaky@gmail.com</a>.
-      </p>
-    </section>
+    <!-- Main -->
+    <main>
+      <section id="about-me">
+        <h2 class="title">About me</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+          laboriosam autem eos ipsum natus! Impedit, fugiat vel! Aut quae illo
+          consectetur aspernatur voluptates blanditiis labore exercitationem
+          veniam, non saepe tempora!
+        </p>
+      </section>
+      <section id="skills">
+        <h2 class="title">Skills</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+        </ul>
+      </section>
+      <section id="portfolio">
+        <h2 class="title">Portfolio</h2>
+        <div class="project-container">
+          <!-- featured item (spans 2 columns on wide screens) -->
+          <a
+            href="./portfolio/web-qr-code/index.html"
+            target="_blank"
+            class="project-featured"
+          >
+            <img
+              src="./portfolio/web-qr-code/assets/images/overview-desktop.webp"
+              alt="web-qr-code"
+              class="project"
+            />
+          </a>
+          <!-- regular items -->
+          <a href="./assets/images/zani.webp" target="_blank">
+            <img src="./assets/images/zani.webp" alt="zani" class="project" />
+          </a>
+          <a href="./assets/images/peeb.jpg" target="_blank">
+            <img src="./assets/images/peeb.jpg" alt="peeb" class="project" />
+          </a>
+        </div>
+      </section>
+      <section id="contact">
+        <h2 class="title">Contact</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, minima,
+          error dolorum velit sit aliquid aut temporibus accusamus amet facere
+          doloremque exercitationem magnam debitis a quo optio eligendi. Nihil,
+          magni.
+          <a href="mailto:hunafa@example.com">hunafa.zaky@gmail.com</a>.
+        </p>
+      </section>
+    </main>
   </body>
 </html>
