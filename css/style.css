@@ -127,7 +127,8 @@ section {
 .project-container {
   display: grid;
   /* Responsive columns: each column at least 220px, grow to fill space */
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); */
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.4rem; /* space between items */
   align-items: start;
   margin: 1rem 0;
