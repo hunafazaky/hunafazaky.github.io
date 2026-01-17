@@ -5,7 +5,7 @@ import HeadLine from './components/HeadLine.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <img alt="Hunafa Zaky logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
       <HeadLine msg="Hunafa Zaky" />
@@ -27,11 +27,18 @@ import HeadLine from './components/HeadLine.vue'
 header {
   line-height: 1.5;
   max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
 }
 
 .logo {
   display: block;
   margin: 0 auto 2rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-text);
 }
 
 nav {
