@@ -5,11 +5,13 @@ import HeadLine from './components/HeadLine.vue'
 
 <template>
   <nav>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/about">About me</RouterLink>
-    <RouterLink to="/skills">Skills</RouterLink>
-    <RouterLink to="/portfolio">Portfolio</RouterLink>
-    <button>contact me</button>
+    <!-- <div> -->
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/about">About me</RouterLink>
+      <RouterLink to="/skills">Skills</RouterLink>
+      <RouterLink to="/portfolio">Portfolio</RouterLink>
+      <button class="btn">contact me</button>
+    <!-- </div> -->
   </nav>
   <header>
     <img alt="Hunafa Zaky logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
@@ -42,29 +44,28 @@ header {
 
 nav {
   font-size: 12px;
-  text-align: center;
-  background-color: brown;
+  background-color: #0B0B0B;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  display: flex;
+  justify-content: end;
+}
+
+.btn {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+  color: gold;
 }
 
 nav a {
   display: inline-block;
+  color: var(--color-text);
   padding: 0 1rem;
-}
-
-nav a:first-of-type {
-  border: 0;
 }
 
 @media (min-width: 1024px) {
