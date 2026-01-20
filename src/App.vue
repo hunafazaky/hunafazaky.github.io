@@ -5,13 +5,11 @@ import HeadLine from './components/HeadLine.vue'
 
 <template>
   <nav>
-    <!-- <div> -->
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About me</RouterLink>
-      <RouterLink to="/skills">Skills</RouterLink>
-      <RouterLink to="/portfolio">Portfolio</RouterLink>
-      <button class="btn">contact me</button>
-    <!-- </div> -->
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/about">About me</RouterLink>
+    <RouterLink to="/skills">Skills</RouterLink>
+    <RouterLink to="/portfolio">Portfolio</RouterLink>
+    <button class="btn">contact me</button>
   </nav>
   <header>
     <img alt="Hunafa Zaky logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
@@ -44,7 +42,7 @@ header {
 
 nav {
   font-size: 12px;
-  background-color: #0B0B0B;
+  background-color: #0b0b0b;
   position: fixed;
   top: 0;
   left: 0;
