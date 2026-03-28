@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <nav>
+    <nav className="bg-gray-500 m-2 p-2">
       <p>This is Navbar</p>
     </nav>
   )
