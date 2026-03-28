@@ -20,10 +20,10 @@ function Gallery() {
     },
   ]
   return (
-    <div>
+    <div className="flex align-center justify-center gap-4 flex-wrap m-4 p-4">
       {
         portfolio.map((item: Record<string, any>) => (
-          <div key={item.id}>
+          <div key={item.id} className="center">
             <p>{item.title}</p>
             <p>{item.description}</p>
             <img src={item.image} alt="sample" />
