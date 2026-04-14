@@ -1,12 +1,14 @@
-function Navbar() {
+import NavbarMenu from "./NavbarMenu"
+
+export default function Navbar() {
   return (
-    <nav className="navbar">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
+    <nav className="flex flex-row gap-4 bg-brand-dark text-brand-dawn p-4">
+      <NavbarMenu onClick={() => alert('Halo!')} itemID="home">Home</NavbarMenu>
+      <div itemID="summary">Summary</div>
+      <div itemID="skills">SKills</div>
+      <div itemID="experiences">Experiences</div>
+      <div itemID="projects">Projects</div>
+      <div itemID="contact">Contact</div>
     </nav>
   )
 }
-
-export default Navbar 
