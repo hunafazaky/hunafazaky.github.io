@@ -1,8 +1,10 @@
 function Navbar() {
   return (
-    <nav className="bg-gray-500 p-2 left-0 right-0 top-0 sticky z-10 flex items-center justify-start gap-2">
-      <div>Content</div>
-      <div>Gallery</div>
+    <nav className="navbar">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
     </nav>
   )
 }

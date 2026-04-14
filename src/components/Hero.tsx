@@ -1,8 +1,8 @@
 function Hero() {
   return (
-    <nav>
+    <div className="hero">
       <p>This is Hero</p>
-    </nav>
+    </div>
   )
 }
 

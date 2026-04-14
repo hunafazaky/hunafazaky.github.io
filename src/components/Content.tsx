@@ -1,8 +1,8 @@
 function Content() {
   return (
-    <nav>
+    <article className="content">
       <p>This is Content</p>
-    </nav>
+    </article>
   )
 }
 

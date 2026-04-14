@@ -1,8 +1,8 @@
-import './App.css'
+// import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Content from './components/Content'
-import Gallery from './components/Gallery'
+import Library from './components/Library'
 import Footer from './components/Footer'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <Hero />
       <Content />
-      <Gallery />
+      <Library />
       <Footer />
     </div>
   )

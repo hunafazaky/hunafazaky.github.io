@@ -1,4 +1,4 @@
-function Gallery() {
+function Library() {
   const portfolio = [
     {
       id: 1,
@@ -20,7 +20,7 @@ function Gallery() {
     },
   ]
   return (
-    <div className="flex align-center justify-center gap-4 flex-wrap m-4 p-4">
+    <div className="library">
       {
         portfolio.map((item: Record<string, any>) => (
           <div key={item.id} className="center">
@@ -34,4 +34,4 @@ function Gallery() {
   )
 }
 
-export default Gallery 
+export default Library 
