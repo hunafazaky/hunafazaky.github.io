@@ -1,18 +1,13 @@
-function Content({ title, items }: Record<string, any>) {
+import H3 from "../ui/H3";
+
+function Content({ children, title }: Record<string, any>) {
   return (
-    <section>
-      <h2>{title}</h2>
-      {items.map((item: Record<string, any>) => (
-        <article>
-          <figure>
-            <img src={item.image} alt={item.title} />
-            <figcaption>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </figcaption>
-          </figure>
-        </article>
-      ))}
+    <section
+      id={title.toLowerCase().replace(/\s+/g, "-")}
+      className="p-8 bg-center text-brand-light bg-cover h-screen flex flex-col"
+    >
+      <H3>{title}</H3>
+      <article>{children}</article>
     </section>
   );
 }

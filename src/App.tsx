@@ -1,8 +1,12 @@
 // import './App.css'
 import Navbar from "./components/blocks/Navbar";
 import Hero from "./components/blocks/Hero";
+import Content from "./components/blocks/Content";
 import Gallery from "./components/blocks/Gallery";
 import Footer from "./components/Footer";
+
+import Text from "./components/ui/Text";
+import H4 from "./components/ui/H4";
 
 const questLog = [
   {
@@ -52,11 +56,91 @@ const achievements = [
 function App() {
   return (
     <div>
-      <Navbar />
+      <Navbar
+        menus={[
+          "Summary",
+          "Educations",
+          "Skills",
+          "Mission",
+          "EXP",
+          "Quest Log",
+          "Achievements",
+        ]}
+      />
       <Hero />
-      <Gallery title="Quest Log" items={questLog} />
+      <Content title="Summary">
+        <Text>
+          Web Developer with a strong focus on secure and maintainable
+          engineering. My primary expertise lies in the MEVN stack (MongoDB,
+          Express.js, Vue.js, Node.js). I build reliable RESTful APIs with a
+          strict emphasis on system security, specifically handling password
+          hashing, JWTs, and secure session/token management.
+        </Text>
+        <Text>
+          Beyond my core stack, I have practical experience with PHP, Python,
+          and SQL. To continuously improve application stability and code
+          predictability, I am currently integrating TypeScript and React into
+          my development workflow. I am open to new roles where I can deliver
+          clean, scalable solutions.
+        </Text>
+      </Content>
+      <Content title="Educations">
+        <H4>
+          <span className="text-brand-rise">
+            Universitas Islam Negeri Sunan Gunung Djati
+          </span>
+          <span> Bandung</span>
+          <span className="opacity-60"> [Bachelor of Engineering]</span>
+        </H4>
+        <Text>
+          Web Developer with a strong focus on secure and maintainable
+          engineering. My primary expertise lies in the MEVN stack (MongoDB,
+          Express.js, Vue.js, Node.js). I build reliable RESTful APIs with a
+          strict emphasis on system security, specifically handling password
+          hashing, JWTs, and secure session/token management.
+        </Text>
+        <Text>
+          Beyond my core stack, I have practical experience with PHP, Python,
+          and SQL. To continuously improve application stability and code
+          predictability, I am currently integrating TypeScript and React into
+          my development workflow. I am open to new roles where I can deliver
+          clean, scalable solutions.
+        </Text>
+      </Content>
+      <Content title="Skills">
+        <ul className="text-xs">
+          <li>
+            <div className="text-brand-rise">Languages:</div>
+            <div className="mb-2">JavaScript (ES6+), Python, PHP, SQL, HTML5, CSS3</div>
+          </li>
+          <li>
+            <div className="text-brand-rise">Frameworks & Libraries:</div>
+            <div className="mb-2">Node.js, Express.js, Vue.js</div>
+          </li>
+          <li>
+            <div className="text-brand-rise">Databases:</div>
+            <div className="mb-2">MongoDB, MySQL</div>
+          </li>
+          <li>
+            <div className="text-brand-rise">Architecture & Security:</div>
+            <div className="mb-2">
+              RESTful APIs, JWT Authentication, Session Management, Password
+              Hashing
+            </div>
+          </li>
+          <li>
+            <div className="text-brand-rise">Developer Tools:</div>
+            <div className="mb-2">Git, Postman</div>
+          </li>
+          <li>
+            <div className="text-brand-rise">Currently Learning:</div>
+            <div className="mb-2">React, TypeScript, Docker</div>
+          </li>
+        </ul>
+      </Content>
+      {/* <Gallery title="Quest Log" items={questLog} />
       <Gallery title="Achievements" items={achievements} />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }

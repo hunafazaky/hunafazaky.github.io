@@ -1,16 +1,18 @@
-import bgImage from "../../assets/office-room.jpg";
+import bgImage from "../../assets/office-room.webp";
+import H1 from "../ui/H1";
+import H2 from "../ui/H2";
 
 function Hero() {
   return (
     <div
       style={{ backgroundImage: `url(${bgImage})` }}
-      className={`px-12 py-8 bg-brand-solar bg-center text-brand-light text-shadow-brand-dark text-shadow-brand bg-cover h-screen flex flex-col blue-xs`}
+      className={`px-12 py-8 bg-brand-solar bg-center text-brand-light text-shadow-lg bg-cover h-screen flex flex-col blue-xs`}
     >
-      <h1 className="font-pixel sm:text-8xl text-6xl">Hunafa Zaky</h1>
-      <h1 className="font-pixel sm:text-4xl text-2xl">
-        Web Developer | MEVN Stack | Building Responsive, Secure, and
+      <H1>Hunafa Zaky</H1>
+      <H2>
+        Web Developer - MEVN Stack - Building Responsive, Secure, and
         Maintainable Web Apps
-      </h1>
+      </H2>
     </div>
   );
 }
