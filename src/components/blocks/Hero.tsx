@@ -1,9 +1,18 @@
+import bgImage from "../../assets/office-room.jpg";
+
 function Hero() {
   return (
-    <div className="bg-brand-solar text-brand-dark bg-[url(https://picsum.photos/720?random)] text-center h-screen flex justify-center items-center">
-      <h1>Web Developer | MEVN Stack | Building Responsive, Secure, and Maintainable Web Apps</h1>
+    <div
+      style={{ backgroundImage: `url(${bgImage})` }}
+      className={`px-12 py-8 bg-brand-solar bg-center text-brand-light text-shadow-brand-dark text-shadow-brand bg-cover h-screen flex flex-col blue-xs`}
+    >
+      <h1 className="font-pixel sm:text-8xl text-6xl">Hunafa Zaky</h1>
+      <h1 className="font-pixel sm:text-4xl text-2xl">
+        Web Developer | MEVN Stack | Building Responsive, Secure, and
+        Maintainable Web Apps
+      </h1>
     </div>
-  )
+  );
 }
 
-export default Hero 
+export default Hero;

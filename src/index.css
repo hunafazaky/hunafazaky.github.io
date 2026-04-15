@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 @theme {
+  --font-sans:
+    "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    monospace;
+  --font-pixel: "VT323", system-ui, sans-serif;
+  --text-shadow-brand: 2px 2px rgb(0, 0, 0 / 1);
   --color-brand-primary: #3b82f6;
   --color-brand-secondary: #1e40af;
   --color-brand-light: #f2f2f2;
@@ -13,5 +18,5 @@
 }
 
 body {
-  background-color: var(--color-brand-light);
+  background-color: var(--color-brand-dark);
 }
