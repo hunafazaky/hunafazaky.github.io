@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 
 import Text from "./components/ui/Text";
 import H4 from "./components/ui/H4";
+import H5 from "./components/ui/H5";
 
 const questLog = [
   {
@@ -85,15 +86,13 @@ function App() {
         </Text>
       </Content>
       <Content title="Academy">
-        <H4>
-          <div className="text-brand-rise font-bold">
-            Universitas Islam Negeri Sunan Gunung Djati
-          </div>
-          <div>
+        <div className="mb-4">
+          <H4>UIN Sunan Gunung Djati</H4>
+          <H5>
             Bandung
             <span className="opacity-60"> [Bachelor of Engineering]</span>
-          </div>
-        </H4>
+          </H5>
+        </div>
         <Text>
           Web Developer with a strong focus on secure and maintainable
           engineering. My primary expertise lies in the MEVN stack (MongoDB,

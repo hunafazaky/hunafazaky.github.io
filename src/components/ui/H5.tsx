@@ -4,7 +4,7 @@ export default function H4({
 }: React.ComponentPropsWithoutRef<"h4">) {
   return (
     <h4
-      className="font-pixel text-2xl text-brand-rise"
+      className="font-pixel text-xl"
       {...props}
     >
       {children}
