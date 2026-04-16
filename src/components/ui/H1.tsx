@@ -3,7 +3,7 @@ export default function H1({
   ...props
 }: React.ComponentPropsWithoutRef<"h1">) {
   return (
-    <h1 className="font-pixel mb-4 text-5xl" {...props}>
+    <h1 className="font-pixel mb-4 text-6xl text-center" {...props}>
       {children}
     </h1>
   );

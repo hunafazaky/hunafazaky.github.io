@@ -1,9 +1,12 @@
+import clsx from "clsx";
+
 export default function Text({
+  className,
   children,
   ...props
 }: React.ComponentPropsWithoutRef<"p">) {
   return (
-    <p className="mb-4 text-xs" {...props}>
+    <p className={clsx("mb-4 text-xs", className)} {...props}>
       {children}
     </p>
   );

@@ -6,11 +6,13 @@ function Hero() {
   return (
     <div
       style={{ backgroundImage: `url(${bgImage})` }}
-      className={`px-12 py-8 bg-brand-solar bg-center text-brand-light text-shadow-lg bg-cover h-screen flex flex-col blue-xs`}
+      className="p-8 bg-brand-dark bg-center bg-cover text-brand-light h-dvh flex flex-col text-shadow-brand-dark text-shadow-bold"
     >
       <H1>Hunafa Zaky</H1>
       <H2>
-        Web Developer - MEVN Stack - Building Responsive, Secure, and
+        Web Developer <br />
+        MEVN Stack <br />
+        Building Responsive, Secure, and
         Maintainable Web Apps
       </H2>
     </div>
