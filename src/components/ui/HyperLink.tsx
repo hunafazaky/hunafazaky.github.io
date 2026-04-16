@@ -3,7 +3,10 @@ export default function HyperLink({
   ...props
 }: React.ComponentPropsWithoutRef<"a">) {
   return (
-    <a className="text-md md:text-2xl xl:text-3xl" {...props}>
+    <a
+      className="text-md md:text-2xl xl:text-3xl text-brand-light hover:text-brand-dawn "
+      {...props}
+    >
       {children}
     </a>
   );

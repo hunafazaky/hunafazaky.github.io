@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans:
+  /* --font-sans:
     "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    monospace;
+    monospace; */
   --font-pixel: "VT323", system-ui, sans-serif;
   --text-shadow-stroke: 2px 2px rgb(0, 0, 0 / 1);
   --text-shadow-light: 2px 2px rgb(255, 255, 255 / 1);

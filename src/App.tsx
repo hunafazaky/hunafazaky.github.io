@@ -58,17 +58,17 @@ function App() {
     <div>
       <Navbar
         menus={[
-          "Summary",
-          "Educations",
+          "Status",
+          "Academy",
           "Skills",
-          "Mission",
           "EXP",
-          "Quest Log",
+          "Mission",
+          // "Items",
           "Achievements",
         ]}
       />
       <Hero />
-      <Content title="Summary">
+      <Content title="Status">
         <Text>
           Web Developer with a strong focus on secure and maintainable
           engineering. My primary expertise lies in the MEVN stack (MongoDB,
@@ -84,13 +84,15 @@ function App() {
           clean, scalable solutions.
         </Text>
       </Content>
-      <Content title="Educations">
+      <Content title="Academy">
         <H4>
-          <span className="text-brand-rise">
+          <div className="text-brand-rise font-bold">
             Universitas Islam Negeri Sunan Gunung Djati
-          </span>
-          <span> Bandung</span>
-          <span className="opacity-60"> [Bachelor of Engineering]</span>
+          </div>
+          <div>
+            Bandung
+            <span className="opacity-60"> [Bachelor of Engineering]</span>
+          </div>
         </H4>
         <Text>
           Web Developer with a strong focus on secure and maintainable
@@ -111,7 +113,9 @@ function App() {
         <ul className="text-xs">
           <li>
             <div className="text-brand-rise">Languages:</div>
-            <div className="mb-2">JavaScript (ES6+), Python, PHP, SQL, HTML5, CSS3</div>
+            <div className="mb-2">
+              JavaScript (ES6+), Python, PHP, SQL, HTML5, CSS3
+            </div>
           </li>
           <li>
             <div className="text-brand-rise">Frameworks & Libraries:</div>
@@ -138,7 +142,7 @@ function App() {
           </li>
         </ul>
       </Content>
-      {/* <Gallery title="Quest Log" items={questLog} />
+      {/* <Gallery title="Items" items={questLog} />
       <Gallery title="Achievements" items={achievements} />
       <Footer /> */}
     </div>
