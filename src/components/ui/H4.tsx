@@ -1,10 +1,13 @@
+import clsx from "clsx";
+
 export default function H4({
+  className,
   children,
   ...props
 }: React.ComponentPropsWithoutRef<"h4">) {
   return (
     <h4
-      className="font-pixel text-2xl text-brand-rise"
+      className={clsx("font-pixel text-3xl text-brand-rise", className)}
       {...props}
     >
       {children}

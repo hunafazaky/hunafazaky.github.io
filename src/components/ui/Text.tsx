@@ -6,7 +6,7 @@ export default function Text({
   ...props
 }: React.ComponentPropsWithoutRef<"p">) {
   return (
-    <p className={clsx("mb-4 text-xs", className)} {...props}>
+    <p className={clsx("mb-4 text-sm", className)} {...props}>
       {children}
     </p>
   );

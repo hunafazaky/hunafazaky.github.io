@@ -1,13 +1,13 @@
-export default function H4({
+import clsx from "clsx";
+
+export default function H5({
+  className,
   children,
   ...props
-}: React.ComponentPropsWithoutRef<"h4">) {
+}: React.ComponentPropsWithoutRef<"h5">) {
   return (
-    <h4
-      className="font-pixel text-xl"
-      {...props}
-    >
+    <h5 className={clsx("font-pixel text-2xl", className)} {...props}>
       {children}
-    </h4>
+    </h5>
   );
 }
