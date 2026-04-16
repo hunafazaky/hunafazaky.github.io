@@ -8,7 +8,7 @@ export default function Navbar({ menus }: Record<string, any>) {
   return (
     <nav className="font-pixel flex justify-between items-center sticky top-0 w-full z-40 bg-brand-dark p-6 border-b-4">
       <img src="/favicon.svg" alt="Hunafa Zaky" className="w-6" />
-      <div className="flex flex-wrap gap-4 hidden">
+      {/* <div className="flex flex-wrap gap-4">
         {menus.map((menu: string, index: number) => (
           <HyperLink
             key={index}
@@ -17,7 +17,7 @@ export default function Navbar({ menus }: Record<string, any>) {
             {menu.toUpperCase()}
           </HyperLink>
         ))}
-      </div>
+      </div> */}
       <Button onClick={() => setIsOpen(true)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
