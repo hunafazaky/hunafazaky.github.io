@@ -8,6 +8,7 @@ import Content from "./components/blocks/Content";
 import Text from "./components/ui/Text";
 import H4 from "./components/ui/H4";
 import H5 from "./components/ui/H5";
+import H6 from "./components/ui/H6";
 import List from "./components/ui/List";
 
 // const questLog = [
@@ -173,37 +174,40 @@ function App() {
         </section>
       </Content>
       <Content title="Skills">
-        <ul className="text-xs">
-          <li>
-            <div className="text-brand-rise">Languages:</div>
-            <div className="mb-2">
-              JavaScript (ES6+), Python, PHP, SQL, HTML5, CSS3
+        <div className="text-xs flex flex-col gap-2">
+          <List>
+            <div className="text-brand-rise font-bold">Language:</div>
+            <div>JavaScript (ES6+), Python, PHP, SQL, HTML5, CSS3</div>
+          </List>
+          <List>
+            <div className="text-brand-rise font-bold">
+              Frameworks & Libraries:
             </div>
-          </li>
-          <li>
-            <div className="text-brand-rise">Frameworks & Libraries:</div>
-            <div className="mb-2">Node.js, Express.js, Vue.js</div>
-          </li>
-          <li>
-            <div className="text-brand-rise">Databases:</div>
-            <div className="mb-2">MongoDB, MySQL</div>
-          </li>
-          <li>
-            <div className="text-brand-rise">Architecture & Security:</div>
-            <div className="mb-2">
+            <div>Node.js, Express.js, Vue.js</div>
+          </List>
+          <List>
+            <div className="text-brand-rise font-bold">Databases:</div>
+            <div>MongoDB, MySQL</div>
+          </List>
+
+          <List>
+            <div className="text-brand-rise font-bold">
+              Architecture & Security:
+            </div>
+            <div>
               RESTful APIs, JWT Authentication, Session Management, Password
               Hashing
             </div>
-          </li>
-          <li>
-            <div className="text-brand-rise">Developer Tools:</div>
-            <div className="mb-2">Git, Postman</div>
-          </li>
-          <li>
-            <div className="text-brand-rise">Currently Learning:</div>
-            <div className="mb-2">React, TypeScript, Docker</div>
-          </li>
-        </ul>
+          </List>
+          <List>
+            <div className="text-brand-rise font-bold">Developer Tools:</div>
+            <div>Git, Postman</div>
+          </List>
+          <List>
+            <div className="text-brand-rise font-bold">Currently Learning:</div>
+            <div>React, TypeScript, Docker</div>
+          </List>
+        </div>
       </Content>
 
       {/* <Gallery title="Items" items={questLog} />
