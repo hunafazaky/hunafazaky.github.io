@@ -6,7 +6,7 @@ export default function Navbar({ menus }: Record<string, any>) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="font-pixel flex justify-between items-center fixed top-0 w-full z-40 bg-brand-dark p-4 border-b border-brand-light">
+    <nav className="font-pixel flex justify-between items-center fixed top-0 w-dvw z-40 bg-brand-dark p-4 border-b border-brand-light">
       <a href="#">
         <img src="/favicon.svg" alt="Hunafa Zaky" className="w-6" />
       </a>

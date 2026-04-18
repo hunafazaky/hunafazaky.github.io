@@ -12,25 +12,25 @@ const notifications = [
     type: "SYSTEM",
     icon: "🔔",
     message: "Player Zaky joined the server.",
-    color: "text-white",
+    color: "text-brand-light",
   },
   {
     type: "CLASS UPGRADE",
     icon: "✨",
     message: "Advanced to: Junior Fullstack Developer!",
-    color: "text-yellow-400",
+    color: "text-brand-rise",
   },
   {
     type: "ITEM ACQUIRED",
     icon: "📜",
     message: "React & Tailwind CSS Grimoire added to inventory.",
-    color: "text-green-400",
+    color: "text-brand-sea",
   },
   {
     type: "NEW QUEST",
     icon: "⚔️",
     message: "Seeking a new party (Open to Work).",
-    color: "text-blue-400",
+    color: "text-brand-forest",
   },
 ];
 
@@ -101,7 +101,7 @@ function Hero() {
           cursor={true}
         />
       </H6> */}
-      <div className="absolute right-8 bottom-8 flex flex-col gap-4 w-full max-w-sm z-30">
+      <div className="flex flex-col justify-end items-start gap-2 z-30 w-full h-dvh">
         {/* HAPUS mode="wait" agar bisa menumpuk */}
         <AnimatePresence>
           {/* 3. LAKUKAN MAPPING ARRAY */}
@@ -116,7 +116,7 @@ function Hero() {
               // Animasi keluar: terdorong ke atas dan memudar
               exit={{ opacity: 0, y: -30, scale: 0.9 }}
               transition={{ duration: 0.3 }}
-              className="bg-brand-dark border border-brand-light p-3 flex items-start gap-3"
+              className="bg-brand-dark border w-full border-brand-light p-2 flex justify-start items-start gap-2"
             >
               <div className="text-2xl">{notif.icon}</div>
               <div className="flex flex-col">
