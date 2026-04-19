@@ -6,13 +6,17 @@ export default function Navbar({ menus }: Record<string, any>) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="font-pixel flex justify-between items-center fixed top-0 w-dvw z-40 bg-brand-dark p-4 border-b border-brand-light">
+    <nav className="font-pixel flex justify-between items-center fixed top-0 w-full z-40 bg-brand-dark p-4 border-b border-brand-light px-8">
       <a href="#">
-        <img src="/favicon.svg" alt="Hunafa Zaky" className="w-6" />
+        <img
+          src="/favicon.svg"
+          alt="Hunafa Zaky"
+          className="w-6 cursor-pointer"
+        />
       </a>
       <Button
         onClick={() => setIsOpen(!isOpen)}
-        className="relative flex justify-center items-center cursor-pointer"
+        className="z-50 cursor-pointer"
       >
         <div className="flex flex-col gap-1 justify-center items-center">
           <span
@@ -37,21 +41,27 @@ export default function Navbar({ menus }: Record<string, any>) {
         </div>
       </Button>
       <div
-        className={`absolute top-14 left-0 right-0 bg-brand-dark flex flex-row flex-wrap justify-between items-center gap-2 p-4 m-2 border border-brand-light transition-all duration-300 ease-in-out origin-top ${
-          isOpen
-            ? "opacity-100 translate-y-0 pointer-events-auto visible"
-            : "opacity-0 -translate-y-5 pointer-events-none invisible"
+        className={`absolute inset-0 h-dvh bg-brand-dark transition-all duration-300 ${
+          isOpen ? "opacity-80" : "opacity-0"
         }`}
       >
-        {menus.map((menu: string, index: number) => (
-          <HyperLink
-            key={index}
-            href={`#${menu.toLowerCase().replace(/\s+/g, "-")}`}
-            onClick={() => setIsOpen(false)}
-          >
-            {menu.toUpperCase()}
-          </HyperLink>
-        ))}
+        <div
+          className={`absolute top-14 left-0 right-0 bg-brand-dark flex flex-row flex-wrap justify-between items-center gap-2 p-4 m-2 border border-brand-light transition-all duration-300 ease-in-out origin-top ${
+            isOpen
+              ? "opacity-100 translate-y-0 pointer-events-auto visible"
+              : "opacity-0 -translate-y-5 pointer-events-none invisible"
+          }`}
+        >
+          {menus.map((menu: string, index: number) => (
+            <HyperLink
+              key={index}
+              href={`#${menu.toLowerCase().replace(/\s+/g, "-")}`}
+              onClick={() => setIsOpen(false)}
+            >
+              {menu.toUpperCase()}
+            </HyperLink>
+          ))}
+        </div>
       </div>
     </nav>
   );

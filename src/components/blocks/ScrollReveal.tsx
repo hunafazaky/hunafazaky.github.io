@@ -10,7 +10,7 @@ export default function ScrollReveal({ children, title }: ScrollRevealProps) {
   return (
     <section
       id={title.toLowerCase().replace(/\s+/g, "-")}
-      className="p-8 pt-8 text-brand-light flex flex-col min-h-dvh"
+      className="p-8 pt-8 bg-brand-dark text-brand-light flex flex-col min-h-dvh"
     >
       <motion.div
         id={title}

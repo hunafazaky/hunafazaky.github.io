@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-pixel: "VT323", system-ui, sans-serif;
+  --font-sans: "Oxanium", sans-serif;
+  --font-pixel: "Jersey 10", system-ui, sans-serif;
   --color-brand-light: #f2f2f2;
   --color-brand-dark: #0b192c;
   --color-brand-crimson: #dc143c;
