@@ -6,8 +6,8 @@ export default function Navbar({ menus }: Record<string, any>) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="font-pixel flex justify-between items-center fixed top-0 w-full z-40 bg-brand-dark p-4 border-b border-brand-light px-8">
-      <a href="#">
+    <nav className="font-pixel flex justify-between items-center fixed top-0 w-full z-40 bg-brand-dark px-6 py-4 border-b-4 border-double border-brand-light">
+      <a href="#" className="z-50 cursor-pointer">
         <img
           src="/favicon.svg"
           alt="Hunafa Zaky"
@@ -20,19 +20,19 @@ export default function Navbar({ menus }: Record<string, any>) {
       >
         <div className="flex flex-col gap-1 justify-center items-center">
           <span
-            className={`block border w-4 transition-all duration-300 ease-in-out ${
+            className={`block border-b-2 w-4 transition-all duration-300 ease-in-out ${
               isOpen
                 ? "rotate-45 translate-y-1.5 border-brand-crimson"
                 : "border-brand-light"
             }`}
           />
           <span
-            className={`block border w-4 transition-all duration-300 ease-in-out ${
+            className={`block border-b-2 w-4 transition-all duration-300 ease-in-out ${
               isOpen ? "opacity-0" : "opacity-100"
             }`}
           />
           <span
-            className={`block border w-4 transition-all duration-300 ease-in-out ${
+            className={`block border-b-2 w-4 transition-all duration-300 ease-in-out ${
               isOpen
                 ? "-rotate-45 -translate-y-1.5 border-brand-crimson"
                 : "border-brand-light"
@@ -41,27 +41,26 @@ export default function Navbar({ menus }: Record<string, any>) {
         </div>
       </Button>
       <div
-        className={`absolute inset-0 h-dvh bg-brand-dark transition-all duration-300 ${
-          isOpen ? "opacity-80" : "opacity-0"
+        className={`absolute inset-0 flex justify-center items-center h-dvh bg-brand-dark transition-all duration-300 ${
+          isOpen ? "opacity-60" : "opacity-0"
+        }`}
+      ></div>
+      <div
+        className={`absolute top-14 right-0 bg-brand-dark flex flex-col flex-wrap justify-between items-center gap-2 w-1/2 p-4 m-2 border-4 border-double border-brand-light transition-all duration-300 ease-in-out origin-top ${
+          isOpen
+            ? "opacity-100 translate-y-0 pointer-events-auto visible"
+            : "opacity-0 -translate-y-5 pointer-events-none invisible"
         }`}
       >
-        <div
-          className={`absolute top-14 left-0 right-0 bg-brand-dark flex flex-row flex-wrap justify-between items-center gap-2 p-4 m-2 border border-brand-light transition-all duration-300 ease-in-out origin-top ${
-            isOpen
-              ? "opacity-100 translate-y-0 pointer-events-auto visible"
-              : "opacity-0 -translate-y-5 pointer-events-none invisible"
-          }`}
-        >
-          {menus.map((menu: string, index: number) => (
-            <HyperLink
-              key={index}
-              href={`#${menu.toLowerCase().replace(/\s+/g, "-")}`}
-              onClick={() => setIsOpen(false)}
-            >
-              {menu.toUpperCase()}
-            </HyperLink>
-          ))}
-        </div>
+        {menus.map((menu: string, index: number) => (
+          <HyperLink
+            key={index}
+            href={`#${menu.toLowerCase().replace(/\s+/g, "-")}`}
+            onClick={() => setIsOpen(false)}
+          >
+            {menu.toUpperCase()}
+          </HyperLink>
+        ))}
       </div>
     </nav>
   );

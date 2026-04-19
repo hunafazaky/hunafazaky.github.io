@@ -8,7 +8,7 @@ export default function H3({
   return (
     <h3
       className={clsx(
-        "font-pixel text-4xl text-brand-dawn border-b-2 mb-4 pt-10 border-brand-dawn",
+        "font-pixel text-4xl text-brand-dawn border-b-4 border-double mb-4 pt-10 border-brand-dawn",
         className,
       )}
       {...props}
@@ -17,3 +17,4 @@ export default function H3({
     </h3>
   );
 }
+``
