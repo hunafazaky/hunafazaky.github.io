@@ -13,9 +13,9 @@ type ContentListProps = {
 function ContentList({ className, list, ...props }: ContentListProps) {
   return (
     <div className="text-xs flex flex-col gap-2 my-2">
-      {list.map((item) => (
+      {list.map((item, index) => (
         // <item>{item}</item>
-        <div className={clsx("flex flex-row", className)} {...props}>
+        <div key={index} className={clsx("flex flex-row", className)} {...props}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

@@ -13,6 +13,13 @@
   --text-shadow-bold: 1.5px 1.5px 0 rgb(0, 0, 0 / 1);
 }
 
+@layer utilities {
+  .bg-dither {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPjxyZWN0IHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IiMwMDAiIGZpbGwtb3BhY2l0eT0iMC4xNSIvPjxyZWN0IHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9InRyYW5zcGFyZW50Ii8+PHJlY3QgeD0iMiIgeT0iMiIgd2lkdGg9IjIiIGhlaWdodD0iMiIgZmlsbD0idHJhbnNwYXJlbnQiLz48L3N2Zz4=");
+    background-repeat: repeat;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

@@ -3,8 +3,8 @@ import Navbar from "./components/blocks/Navbar";
 import Hero from "./components/blocks/Hero";
 import Content from "./components/blocks/Content";
 import ScrollReveal from "./components/blocks/ScrollReveal";
-// import Gallery from "./components/blocks/Gallery";
-// import Footer from "./components/Footer";
+import Gallery from "./components/blocks/Gallery";
+import Footer from "./components/blocks/Footer";
 
 import Text from "./components/ui/Text";
 import H4 from "./components/ui/H4";
@@ -12,50 +12,50 @@ import H5 from "./components/ui/H5";
 // import H6 from "./components/ui/H6";
 import ContentList from "./components/blocks/ContentList";
 
-// const questLog = [
-//   {
-//     id: 1,
-//     title: "Local Weather App",
-//     description:
-//       "Local Weather App is a web application that provides real-time weather information based on the user's location. It utilizes the OpenWeatherMap API to fetch current weather data, including temperature, humidity, wind speed, and weather conditions. The app features a user-friendly interface with responsive design, allowing users to easily access weather information on various devices. Users can also search for weather conditions in different cities around the world. The Local Weather App is built using HTML, CSS, and JavaScript, making it a lightweight and efficient tool for staying informed about the weather.",
-//     image: "https://picsum.photos/300/200?random=1",
-//     ref: "https://hunafazaky.github.io/local-weather-app",
-//   },
-//   {
-//     id: 2,
-//     title: "Project 2",
-//     description: "Description of project 2",
-//     image: "https://picsum.photos/300/200?random=2",
-//     ref: "/",
-//   },
-//   {
-//     id: 3,
-//     title: "Project 3",
-//     description: "Description of project 3",
-//     image: "https://picsum.photos/300/200?random=3",
-//     ref: "/",
-//   },
-// ];
-// const achievements = [
-//   {
-//     id: 1,
-//     title: "Achievements 1",
-//     description: "Description of Achievements 1",
-//     image: "https://picsum.photos/300/200?random=4",
-//   },
-//   {
-//     id: 2,
-//     title: "Achievements 2",
-//     description: "Description of Achievements 2",
-//     image: "https://picsum.photos/300/200?random=5",
-//   },
-//   {
-//     id: 3,
-//     title: "Achievements 3",
-//     description: "Description of Achievements 3",
-//     image: "https://picsum.photos/300/200?random=6",
-//   },
-// ];
+const questLog = [
+  {
+    id: 1,
+    title: "Local Weather App",
+    description:
+      "Local Weather App is a web application that provides real-time weather information based on the user's location. It utilizes the OpenWeatherMap API to fetch current weather data, including temperature, humidity, wind speed, and weather conditions. The app features a user-friendly interface with responsive design, allowing users to easily access weather information on various devices. Users can also search for weather conditions in different cities around the world. The Local Weather App is built using HTML, CSS, and JavaScript, making it a lightweight and efficient tool for staying informed about the weather.",
+    image: "https://picsum.photos/300/200?random=1",
+    ref: "https://hunafazaky.github.io/local-weather-app",
+  },
+  {
+    id: 2,
+    title: "Project 2",
+    description: "Description of project 2",
+    image: "https://picsum.photos/300/200?random=2",
+    ref: "/",
+  },
+  {
+    id: 3,
+    title: "Project 3",
+    description: "Description of project 3",
+    image: "https://picsum.photos/300/200?random=3",
+    ref: "/",
+  },
+];
+const achievements = [
+  {
+    id: 1,
+    title: "Achievements 1",
+    description: "Description of Achievements 1",
+    image: "https://picsum.photos/300/200?random=4",
+  },
+  {
+    id: 2,
+    title: "Achievements 2",
+    description: "Description of Achievements 2",
+    image: "https://picsum.photos/300/200?random=5",
+  },
+  {
+    id: 3,
+    title: "Achievements 3",
+    description: "Description of Achievements 3",
+    image: "https://picsum.photos/300/200?random=6",
+  },
+];
 
 const internListPoint = [
   "Applied updated design specifications to modernize the application's interface and ensure responsiveness across devices.",
@@ -80,6 +80,7 @@ function App() {
         menus={["Profile", "Lore", "Skills", "Mission", "Achievements"]}
       />
       <Hero />
+
       <ScrollReveal title="Profile">
         <Text>
           Web Developer with a strong focus on secure and maintainable
@@ -96,6 +97,7 @@ function App() {
           clean, scalable solutions.
         </Text>
       </ScrollReveal>
+
       <ScrollReveal title="Lore">
         <section className="mb-4">
           <H4>Quest</H4>
@@ -140,6 +142,7 @@ function App() {
           />
         </section>
       </ScrollReveal>
+
       <ScrollReveal title="Skills">
         <ContentList
           list={[
@@ -155,9 +158,14 @@ function App() {
           ]}
         />
       </ScrollReveal>
-      {/* <Gallery title="Items" items={questLog} />
-      <Gallery title="Achievements" items={achievements} />
-      <Footer /> */}
+
+      <ScrollReveal title="Items">
+        <Gallery items={questLog} />
+      </ScrollReveal>
+      <ScrollReveal title="Achievements">
+        <Gallery items={achievements} />
+      </ScrollReveal>
+      <Footer />
     </div>
   );
 }
