@@ -17,6 +17,9 @@ importers:
       framer-motion:
         specifier: ^12.38.0
         version: 12.38.0(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
+      pixelarticons:
+        specifier: ^2.1.0
+        version: 2.1.0(react@19.2.5)
       react:
         specifier: ^19.2.5
         version: 19.2.5
@@ -1245,6 +1248,12 @@ packages:
     resolution: {integrity: sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==}
     engines: {node: '>=12'}
 
+  pixelarticons@2.1.0:
+    resolution: {integrity: sha512-t03/DsFadIEU7SCwmi4mcnYgZMCKPawvvPt+KM9bW5nC4TcNFatCD196Qm9IT/5bIIbSCGjmjAoMrTZKxRBdJw==}
+    hasBin: true
+    peerDependencies:
+      react: '>=16'
+
   postcss@8.5.9:
     resolution: {integrity: sha512-7a70Nsot+EMX9fFU3064K/kdHWZqGVY+BADLyXc8Dfv+mTLLVl6JzJpPaCZ2kQL9gIJvKXSLMHhqdRRjwQeFtw==}
     engines: {node: ^10 || ^12 || >=14}
@@ -2454,6 +2463,10 @@ snapshots:
   picocolors@1.1.1: {}
 
   picomatch@4.0.4: {}
+
+  pixelarticons@2.1.0(react@19.2.5):
+    dependencies:
+      react: 19.2.5
 
   postcss@8.5.9:
     dependencies:

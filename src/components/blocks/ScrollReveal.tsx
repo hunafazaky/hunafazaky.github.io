@@ -19,7 +19,7 @@ export default function ScrollReveal({ children, title }: ScrollRevealProps) {
         transition={{ duration: 0.3, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.2 }}
       >
-        <H3 className="">{title}</H3>
+        <H3>{title}</H3>
         {children}
       </motion.div>
     </section>

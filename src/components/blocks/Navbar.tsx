@@ -6,7 +6,7 @@ export default function Navbar({ menus }: Record<string, any>) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="font-pixel flex justify-between items-center fixed top-0 w-full z-40 bg-brand-dark px-6 py-4 border-b-4 border-double border-brand-light">
+    <nav className="font-pixel flex justify-between items-center fixed top-0 w-full z-40 bg-brand-dark px-6 py-4 border-b-4 border-brand-light">
       <a href="#" className="z-50 cursor-pointer">
         <img
           src="/favicon.svg"
@@ -40,13 +40,17 @@ export default function Navbar({ menus }: Record<string, any>) {
           />
         </div>
       </Button>
+      {/* {isOpen &&  */}
       <div
         className={`absolute inset-0 flex justify-center items-center h-dvh bg-brand-dark transition-all duration-300 ${
-          isOpen ? "opacity-60" : "opacity-0"
+          isOpen
+            ? "opacity-60 pointer-events-auto visible"
+            : "opacity-0 pointer-events-none invisible"
         }`}
       ></div>
+      {/* } */}
       <div
-        className={`absolute top-14 right-0 bg-brand-dark flex flex-col flex-wrap justify-between items-center gap-2 w-1/2 p-4 m-2 border-4 border-double border-brand-light transition-all duration-300 ease-in-out origin-top ${
+        className={`absolute top-14 right-0 bg-brand-dark flex flex-col flex-wrap justify-between items-center gap-2 w-1/2 p-4 m-2 border-4 border-brand-light transition-all duration-300 ease-in-out origin-top ${
           isOpen
             ? "opacity-100 translate-y-0 pointer-events-auto visible"
             : "opacity-0 -translate-y-5 pointer-events-none invisible"
