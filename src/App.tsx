@@ -8,7 +8,7 @@ import Footer from "./components/blocks/Footer";
 
 import Text from "./components/ui/Text";
 import H4 from "./components/ui/H4";
-import H5 from "./components/ui/H5";
+// import H5 from "./components/ui/H5";
 // import H6 from "./components/ui/H6";
 import ContentList from "./components/blocks/ContentList";
 
