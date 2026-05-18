@@ -21,20 +21,6 @@ const questLog = [
     image: "https://picsum.photos/300/200?random=1",
     ref: "https://hunafazaky.github.io/local-weather-app",
   },
-  {
-    id: 2,
-    title: "Project 2",
-    description: "Description of project 2",
-    image: "https://picsum.photos/300/200?random=2",
-    ref: "/",
-  },
-  {
-    id: 3,
-    title: "Project 3",
-    description: "Description of project 3",
-    image: "https://picsum.photos/300/200?random=3",
-    ref: "/",
-  },
 ];
 const achievements = [
   {
@@ -42,18 +28,6 @@ const achievements = [
     title: "Achievements 1",
     description: "Description of Achievements 1",
     image: "https://picsum.photos/300/200?random=4",
-  },
-  {
-    id: 2,
-    title: "Achievements 2",
-    description: "Description of Achievements 2",
-    image: "https://picsum.photos/300/200?random=5",
-  },
-  {
-    id: 3,
-    title: "Achievements 3",
-    description: "Description of Achievements 3",
-    image: "https://picsum.photos/300/200?random=6",
   },
 ];
 
