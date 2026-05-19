@@ -8,7 +8,7 @@ export default function Button({
   return (
     <button
       className={clsx(
-        "md:hidden text-white hover:text-yellow-400 text-2xl focus:outline-none",
+        "text-white hover:text-yellow-400 text-2xl focus:outline-none",
         className,
       )}
       {...props}
