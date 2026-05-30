@@ -3,11 +3,11 @@ import Text from "../ui/Text";
 
 function Gallery({ items }: Record<string, any>) {
   return (
-    <div className="flex flex-col justify-center items-center gap-2">
+    <div className="grid grid-cols-4 gap-4">
       {items.map((item: Record<string, any>, index: number) => (
         <article
           key={index}
-          className="w-full bg-brand-rise bg-dither text-brand-dark border-2 border-brand-light"
+          className="bg-brand-rise bg-dither text-brand-dark border-2 border-brand-light"
         >
           <figure className="border-4 border-brand-dark p-4">
             <img
