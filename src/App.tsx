@@ -1,4 +1,3 @@
-// import './App.css'
 import Navbar from "./components/blocks/Navbar";
 import Hero from "./components/blocks/Hero";
 import Content from "./components/blocks/Content";
@@ -8,8 +7,6 @@ import Footer from "./components/blocks/Footer";
 
 import Text from "./components/ui/Text";
 import H4 from "./components/ui/H4";
-// import H5 from "./components/ui/H5";
-// import H6 from "./components/ui/H6";
 import ContentList from "./components/blocks/ContentList";
 
 const questLog = [
