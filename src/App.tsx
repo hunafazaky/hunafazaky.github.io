@@ -1,13 +1,13 @@
-import Navbar from "./components/blocks/Navbar";
-import Hero from "./components/blocks/Hero";
-import Content from "./components/blocks/Content";
-import ScrollReveal from "./components/blocks/ScrollReveal";
-import Gallery from "./components/blocks/Gallery";
-import Footer from "./components/blocks/Footer";
+import Navbar from "./components/content/Navbar";
+import Hero from "./components/content/Hero";
+import Content from "./components/content/Content";
+import ScrollReveal from "./components/content/ScrollReveal";
+import Gallery from "./components/content/Gallery";
+import Footer from "./components/content/Footer";
 
-import Text from "./components/ui/Text";
-import H4 from "./components/ui/H4";
-import ContentList from "./components/blocks/ContentList";
+import Text from "./components/element/Text";
+import H4 from "./components/element/H4";
+import ContentList from "./components/content/ContentList";
 
 const questLog = [
   {
@@ -60,7 +60,7 @@ function App() {
       />
       <Hero />
 
-      <ScrollReveal title="Profile">
+      <ScrollReveal title="Profile" className="pr-6">
         <Text>
           Web Developer with a strong focus on secure and maintainable
           engineering. My primary expertise lies in the MEVN stack (MongoDB,

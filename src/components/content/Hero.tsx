@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import bgAvif from "../../assets/pxArt.avif";
 import bgWebp from "../../assets/pxArt.webp";
 import bgJpg from "../../assets/pxArt.png";
-import H1 from "../ui/H1";
-import H5 from "../ui/H5";
-import H6 from "../ui/H6";
+import H1 from "../element/H1";
+import H5 from "../element/H5";
+import H6 from "../element/H6";
 
 export default function Portfolio() {
   // 1. Buat state untuk menyimpan nilai scroll

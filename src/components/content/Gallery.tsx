@@ -1,5 +1,5 @@
-import H6 from "../ui/H6";
-import Text from "../ui/Text";
+import H6 from "../element/H6";
+import Text from "../element/Text";
 
 function Gallery({ items }: Record<string, any>) {
   return (

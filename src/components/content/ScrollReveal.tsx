@@ -1,16 +1,17 @@
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
-import H3 from "../ui/H3";
+import H3 from "../element/H3";
+import clsx from "clsx";
 
 interface ScrollRevealProps extends Record<string, any> {
   children: ReactNode;
 }
 
-export default function ScrollReveal({ children, title }: ScrollRevealProps) {
+export default function ScrollReveal({ className, children, title }: ScrollRevealProps) {
   return (
     <section
       id={title.toLowerCase().replace(/\s+/g, "-")}
-      className="px-6 py-8 bg-brand-dark text-brand-light flex flex-col min-h-dvh"
+      className={clsx("px-6 py-8 bg-brand-dark text-brand-light flex flex-col min-h-dvh", className)}
     >
       <motion.div
         id={title}

@@ -1,4 +1,4 @@
-import HyperLink from "../ui/HyperLink";
+import HyperLink from "../element/HyperLink";
 
 function Footer() {
   const currentYear = new Date().getFullYear();

@@ -1,5 +1,5 @@
-import HyperLink from "../ui/HyperLink";
-import Button from "../ui/Button";
+import HyperLink from "../element/HyperLink";
+import Button from "../element/Button";
 import { useState } from "react";
 
 export default function Navbar({ menus }: Record<string, any>) {

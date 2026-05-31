@@ -1,5 +1,5 @@
-import Text from "../ui/Text";
-import H5 from "../ui/H5";
+import Text from "../element/Text";
+import H5 from "../element/H5";
 
 type ContentProps = {
   title: Record<string, string>;
