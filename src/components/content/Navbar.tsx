@@ -6,12 +6,12 @@ export default function Navbar({ menus }: Record<string, any>) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="font-pixel flex justify-between items-center fixed top-0 w-full z-40 bg-brand-dark px-8 py-4 border-b-4 border-brand-light">
+    <nav className="font-pixel flex justify-between items-center fixed top-0 w-full z-40 bg-brand-dark px-8 sm:px-16 py-4 sm:py-8 border-b-4 border-brand-light">
       <a href="#" className="z-50 cursor-pointer">
         <img
           src="/favicon.svg"
           alt="Hunafa Zaky"
-          className="w-6 cursor-pointer"
+          className="w-6 sm:w-8 cursor-pointer"
         />
       </a>
       <div className="flex sm:hidden">

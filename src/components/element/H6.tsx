@@ -6,7 +6,7 @@ export default function H6({
   ...props
 }: React.ComponentPropsWithoutRef<"h6">) {
   return (
-    <h6 className={clsx("font-pixel text-xl", className)} {...props}>
+    <h6 className={clsx("font-pixel text-xl sm:text-2xl", className)} {...props}>
       {children}
     </h6>
   );
