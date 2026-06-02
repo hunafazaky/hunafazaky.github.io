@@ -3,7 +3,7 @@ import Text from "../element/Text";
 
 export default function Profile() {
   return (
-    <ScrollReveal title="Profile" className="sm:w-2/3 md:w-1/2 m-12">
+    <ScrollReveal title="Profile" className="sm:w-2/3 m-auto">
       <Text>
         Web Developer with a strong focus on secure and maintainable
         engineering. My primary expertise lies in the MEVN stack (MongoDB,

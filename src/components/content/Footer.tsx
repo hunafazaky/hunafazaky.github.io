@@ -3,12 +3,6 @@ import HyperLink from "../element/HyperLink";
 function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    // <footer id="footer">
-    //   <span>Save File Created: © 2026 Zaky</span>
-    //   <span>Forged with React & Tailwind</span>
-    //   <span>Multiplayer / Guild Contacts</span>
-
-    // </footer>
     <footer className="bg-brand-dark h-dvh flex justify-end items-end">
       <div className="w-full mx-auto flex flex-col items-center justify-between gap-4 border-t-4 border-brand-light text-gray-400 p-4">
         <div className="flex flex-col items-center md:items-start gap-2">
@@ -65,14 +59,13 @@ function Footer() {
           </HyperLink>
         </div>
 
-        {/* Bagian Kanan: Fast Travel (Back to Top) */}
-        <button
+        {/* <button
           // Fungsi untuk scroll mulus ke paling atas
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="font-pixel text-xs p-1 w-full bg-brand-dark hover:bg-brand-light text-brand-light hover:text-brand-dark border-2 border-brand-light transition-all cursor-pointer"
         >
           Back to The Title
-        </button>
+        </button> */}
       </div>
     </footer>
   );

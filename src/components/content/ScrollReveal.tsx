@@ -17,7 +17,7 @@ export default function ScrollReveal({
     <div className="bg-brand-dark text-brand-light flex flex-col">
       <section
         id={title.toLowerCase().replace(/\s+/g, "-")}
-        className={clsx("px-6 py-8 min-h-dvh", className)}
+        className={clsx("p-8 min-h-1/2", className)}
       >
         <motion.div
           id={title}

@@ -6,7 +6,7 @@ export default function Navbar({ menus }: Record<string, any>) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="font-pixel flex justify-between items-center fixed top-0 w-full z-40 bg-brand-dark px-12 md:px-12 py-4 border-b-4 border-brand-light">
+    <nav className="font-pixel flex justify-between items-center fixed top-0 w-full z-40 bg-brand-dark px-8 py-4 border-b-4 border-brand-light">
       <a href="#" className="z-50 cursor-pointer">
         <img
           src="/favicon.svg"
@@ -14,7 +14,7 @@ export default function Navbar({ menus }: Record<string, any>) {
           className="w-6 cursor-pointer"
         />
       </a>
-      <div className="flex md:hidden">
+      <div className="flex sm:hidden">
         <Button
           onClick={() => setIsOpen(!isOpen)}
           className="z-50 cursor-pointer"
@@ -66,7 +66,7 @@ export default function Navbar({ menus }: Record<string, any>) {
           ))}
         </div>
       </div>
-      <div className="md:flex hidden gap-4">
+      <div className="sm:flex hidden gap-4">
         {menus.map((menu: string, index: number) => (
           <HyperLink
             key={index}

@@ -21,7 +21,7 @@ const internListPoint = [
 
 export default function Timeline() {
   return (
-    <ScrollReveal title="Timeline" className="sm:w-2/3 md:w-1/2 m-12 self-end">
+    <ScrollReveal title="Timeline" className="sm:w-2/3 sm:pr-24 sm:self-end">
       <section className="mb-4">
         <H4>Quest</H4>
         <Content

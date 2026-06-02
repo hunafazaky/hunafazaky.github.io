@@ -22,7 +22,7 @@ const questLog = [
 
 export default function Achievements() {
   return (
-    <ScrollReveal title="Achievements" className="m-12">
+    <ScrollReveal title="Achievements" className="sm:m-12">
       <Gallery items={questLog} />
     </ScrollReveal>
   );

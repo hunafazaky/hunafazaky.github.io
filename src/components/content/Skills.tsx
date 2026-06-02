@@ -3,7 +3,7 @@ import ContentList from "../content/ContentList";
 
 export default function Skills() {
   return (
-    <ScrollReveal title="Skills" className="sm:w-2/3 md:w-1/2 m-12">
+    <ScrollReveal title="Skills" className="sm:w-2/3 sm:pl-24">
       <ContentList
         list={[
           { Langages: "JavaScript (ES6+), Python, PHP, SQL, HTML5, CSS3" },
