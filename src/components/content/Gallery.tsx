@@ -9,7 +9,7 @@ function Gallery({ items }: Record<string, any>) {
           key={index}
           className="bg-brand-rise bg-dither text-brand-dark border-2 border-brand-light"
         >
-          <figure className="border-4 border-brand-dark p-4">
+          <figure className="border-4 border-brand-dark p-4 h-full">
             <img
               src={item.image}
               className="w-full border-2 border-brand-dark"
@@ -17,7 +17,7 @@ function Gallery({ items }: Record<string, any>) {
             />
             <figcaption>
               <H6 className="text-brand-sea">
-                <a href={item.ref}>{item.title}</a>
+                <a href={item.ref} target="_blank">{item.title}</a>
               </H6>
               <Text className="line-clamp-4">{item.description}</Text>
             </figcaption>
