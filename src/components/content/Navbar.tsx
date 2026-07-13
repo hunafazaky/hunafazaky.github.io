@@ -2,7 +2,7 @@ import HyperLink from "../element/HyperLink";
 import Button from "../element/Button";
 import { useState } from "react";
 
-export default function Navbar({ menus }: Record<string, any>) {
+export default function Navbar({ menus }: { menus: string[] }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
