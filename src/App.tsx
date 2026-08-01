@@ -1,25 +1,21 @@
-import Navbar from "./components/content/Navbar";
-import Hero from "./components/content/Hero";
-import Profile from "./components/content/Profile";
-import Timeline from "./components/content/Timeline";
-import Skills from "./components/content/Skills";
-import Achievements from "./components/content/Achievements";
-import Footer from "./components/content/Footer";
+import { Button } from "@/components/ui/button"
 
-const menus = ["Profile", "Timeline", "Skills", "Achievements"];
-
-function App() {
+export function App() {
   return (
-    <div>
-      <Navbar menus={menus} />
-      <Hero />
-      <Profile />
-      <Timeline />
-      <Skills />
-      <Achievements />
-      <Footer />
+    <div className="flex min-h-svh p-6">
+      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
+        <div>
+          <h1 className="font-medium">Project ready!</h1>
+          <p>You may now add components and start building.</p>
+          <p>We&apos;ve already added the button component for you.</p>
+          <Button className="mt-2">Button</Button>
+        </div>
+        <div className="font-mono text-xs text-muted-foreground">
+          (Press <kbd>d</kbd> to toggle dark mode)
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
