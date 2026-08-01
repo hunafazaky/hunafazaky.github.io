@@ -44,7 +44,7 @@ export default function Hero() {
 
       {/* Overlay Gelap Dinamis */}
       <div
-        className="bg-brand-dark absolute inset-0 z-10"
+        className="absolute inset-0 z-10 dark:bg-background"
         style={{ opacity: overlayDarkness }} // Menggunakan inline style untuk nilai dinamis
       ></div>
 

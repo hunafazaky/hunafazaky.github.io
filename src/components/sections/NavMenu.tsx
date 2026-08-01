@@ -16,7 +16,9 @@ export function NavMenu() {
       <NavigationMenuList>
         {menus.map((menu, index) => (
           <NavigationMenuItem className="hidden sm:block" key={index}>
-            <NavigationMenuLink href={`#${menu}`}>{menu}</NavigationMenuLink>
+            <NavigationMenuLink className="capitalize" href={`#${menu}`}>
+              {menu}
+            </NavigationMenuLink>
           </NavigationMenuItem>
         ))}
         <NavigationMenuItem className="block sm:hidden">
@@ -25,7 +27,9 @@ export function NavMenu() {
           </NavigationMenuTrigger>
           {menus.map((menu, index) => (
             <NavigationMenuContent key={index}>
-              <NavigationMenuLink href={`#${menu}`}>{menu}</NavigationMenuLink>
+              <NavigationMenuLink className="capitalize" href={`#${menu}`}>
+                {menu}
+              </NavigationMenuLink>
             </NavigationMenuContent>
           ))}
         </NavigationMenuItem>

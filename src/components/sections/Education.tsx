@@ -16,7 +16,7 @@ export function EduFormat({ data }: { data: Education }) {
     <div className="mb-2">
       <div className="flex flex-col gap-1">
         <div>
-          <span className="mr-2 font-bold">{data.school}</span>
+          <span className="mr-1 font-bold">{data.school}</span>
           <span>({data.date})</span>
         </div>
         <div className="text-xs">
@@ -36,7 +36,9 @@ export function Education() {
     <div className="mb-8 pt-18" id="education">
       <SectionTitle title="education" />
       <section className="mb-4">
-        <h2 className="bg-primary p-1 text-lg font-bold">Formal Education</h2>
+        <h2 className="bg-primary px-2 py-1 text-lg font-bold">
+          Formal Education
+        </h2>
         <div className="border-l-2 border-primary pt-2 pl-2">
           {formalEdu.map((data, index) => (
             <EduFormat key={index} data={data} />
@@ -44,7 +46,9 @@ export function Education() {
         </div>
       </section>
       <section>
-        <h2 className="bg-primary p-1 text-lg font-bold">Informal Education</h2>
+        <h2 className="bg-primary px-2 py-1 text-lg font-bold">
+          Informal Education
+        </h2>
         <div className="border-l-2 border-primary pt-2 pl-2">
           {informalEdu.map((data, index) => (
             <EduFormat key={index} data={data} />

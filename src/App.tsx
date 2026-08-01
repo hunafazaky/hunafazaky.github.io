@@ -15,20 +15,21 @@ export function App() {
     <>
       <motion.div
         id="scroll-indicator"
+        className="z-20"
         style={{
           scaleX: scrollYProgress,
           position: "fixed",
           top: 0,
           left: 0,
           right: 0,
-          height: 5,
+          height: 4,
           originX: 0,
           backgroundColor: "var(--primary)",
         }}
       />
 
-      <header className="sticky top-0 z-10">
-        <nav className="flex w-dvw justify-between bg-primary p-4">
+      <header className="sticky top-0 z-10 border-b-4 border-primary">
+        <nav className="flex w-dvw justify-between bg-background p-4">
           <NavMenu />
         </nav>
       </header>
