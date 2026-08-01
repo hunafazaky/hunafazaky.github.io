@@ -2,7 +2,7 @@ import { SectionTitle } from "../section-title"
 
 export function Summary() {
   return (
-    <div className="mb-8" id="summary">
+    <div className="mb-8 pt-18" id="summary">
       <SectionTitle title="summary" />
       <p>
         A Fullstack Developer specialized in the React and Next.js ecosystem to

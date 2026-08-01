@@ -6,21 +6,28 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
+import menusData from "@/data/menus.json"
+import { RiMenuLine } from "@remixicon/react"
 
 export function NavMenu() {
+  const menus = menusData
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        {Array.from({ length: 4 }).map((_, index) => (
-          <NavigationMenuItem key={index}>
-            <NavigationMenuLink href="#experience">Link 1</NavigationMenuLink>
+        {menus.map((menu, index) => (
+          <NavigationMenuItem className="hidden sm:block" key={index}>
+            <NavigationMenuLink href={`#${menu}`}>{menu}</NavigationMenuLink>
           </NavigationMenuItem>
         ))}
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Item Group</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <NavigationMenuLink href="#">Link</NavigationMenuLink>
-          </NavigationMenuContent>
+        <NavigationMenuItem className="block sm:hidden">
+          <NavigationMenuTrigger>
+            <RiMenuLine />
+          </NavigationMenuTrigger>
+          {menus.map((menu, index) => (
+            <NavigationMenuContent key={index}>
+              <NavigationMenuLink href={`#${menu}`}>{menu}</NavigationMenuLink>
+            </NavigationMenuContent>
+          ))}
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

@@ -51,7 +51,7 @@ export function ExpFormat({ data }: { data: Experience }) {
 export function Experience() {
   const experiences = experiencesData
   return (
-    <div className="mb-8" id="experience">
+    <div className="mb-8 pt-18" id="experience">
       <SectionTitle title="experience" />
       {experiences.map((data, index) => (
         <ExpFormat key={index} data={data} />

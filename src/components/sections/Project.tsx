@@ -53,7 +53,7 @@ export function Project() {
   const projects = projectsData
 
   return (
-    <div className="mb-8" id="project">
+    <div className="mb-8 pt-18" id="project">
       <SectionTitle title="project" />
       {projects.map((data, index) => (
         <ProFormat key={index} data={data} />

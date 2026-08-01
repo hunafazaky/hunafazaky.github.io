@@ -4,7 +4,7 @@ import Hero from "./components/sections/Hero"
 import { Summary } from "./components/sections/Summary"
 import { Experience } from "./components/sections/Experience"
 import { Project } from "./components/sections/Project"
-import {Education} from "./components/sections/Education"
+import { Education } from "./components/sections/Education"
 import { Skill } from "./components/sections/Skill"
 import { motion, useScroll } from "motion/react"
 
@@ -27,8 +27,8 @@ export function App() {
         }}
       />
 
-      <header>
-        <nav className="flex w-dvw justify-center border-b-2 border-foreground py-4">
+      <header className="sticky top-0 z-10">
+        <nav className="flex w-dvw justify-between bg-primary p-4">
           <NavMenu />
         </nav>
       </header>
@@ -37,7 +37,7 @@ export function App() {
         <section className="hero">
           <Hero />
         </section>
-        <section className="main-content py-8 px-4">
+        <section className="main-content px-4 py-8">
           <Summary />
           <Experience />
           <Project />
@@ -46,8 +46,8 @@ export function App() {
         </section>
       </main>
 
-      <footer>
-        <p>&copy; 2026 BrandName. All rights reserved.</p>
+      <footer className="flex items-center justify-center bg-primary px-4 py-8">
+        <p>&copy; 2026 Hunafa Zaky. All rights reserved.</p>
       </footer>
       {/* <div className="flex min-h-svh p-6">
         <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">

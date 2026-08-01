@@ -5,8 +5,8 @@ import { Card } from "../ui/card"
 export function Skill() {
   const skills = skillsData
   return (
-    <div className="mb-8" id="skills">
-      <SectionTitle title="skills" />
+    <div className="mb-8 pt-18" id="skill">
+      <SectionTitle title="skill" />
       <div className="flex flex-wrap gap-1">
         {skills.map((list, index) => (
           <Card key={index} className="w-fit border px-2 py-1">
