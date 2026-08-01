@@ -1,18 +1,63 @@
-export function Project() {
+import { SectionTitle } from "../section-title"
+import { RiArrowRightDoubleFill } from "@remixicon/react"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  // CardFooter,
+  // CardAction,
+} from "@/components/ui/card"
+import projectsData from "@/data/projects.json"
+
+interface Project {
+  title: string
+  liveUrl: string
+  imageUrl: string
+  stacks: string[]
+  description: {
+    name: string
+    text: string
+  }[]
+}
+
+export function ProFormat({ data }: { data: Project }) {
+  const stackList = data.stacks.join(", ")
   return (
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-      laboriosam placeat magni. A doloremque, optio hic quibusdam cum molestiae,
-      ex quam ipsam ea, voluptatibus deleniti illum eaque sunt! Quis enim odit
-      dicta laboriosam, pariatur dolorum, perferendis minima sit perspiciatis
-      necessitatibus impedit nulla alias harum nesciunt exercitationem nisi
-      eveniet. Harum, impedit autem. Et, veniam. Dolorem provident dignissimos
-      consectetur nesciunt distinctio eos, tempora odit! Sit laboriosam,
-      sapiente hic voluptates repudiandae eius, deleniti, est incidunt odio
-      atque neque dicta omnis dignissimos voluptatum perspiciatis? Maiores
-      labore mollitia, assumenda quod aspernatur nostrum repellat ipsum hic
-      quidem ratione ad ab, eius voluptates repudiandae exercitationem aperiam
-      dolorem.
-    </p>
+    <Card className="my-2 border-2 border-foreground">
+      <CardHeader>
+        <a href={data.liveUrl} target="_blank">
+          <CardTitle className="hover:text-destructive">{data.title}</CardTitle>
+        </a>
+        <CardDescription>{stackList}</CardDescription>
+      </CardHeader>
+      <CardContent>
+        {data.description.map((list, index) => (
+          <div key={index} className="mb-2 flex">
+            <div>
+              <RiArrowRightDoubleFill size={20} />
+            </div>
+            <div>
+              <span className="font-bold">{list.name}: </span>
+              <span>{list.text}</span>
+            </div>
+          </div>
+        ))}
+      </CardContent>
+    </Card>
+  )
+}
+
+export function Project() {
+  const projects = projectsData
+
+  return (
+    <div className="mb-8" id="project">
+      <SectionTitle title="project" />
+      {projects.map((data, index) => (
+        <ProFormat key={index} data={data} />
+      ))}
+    </div>
   )
 }

@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Reading Platform",
+    "liveUrl": "https://hz-reading-platform.vercel.app/",
+    "imageUrl": "@/src/assets/react.svg",
+    "stacks": [
+      "Next.js",
+      "Shadcn",
+      "Cloudflare Storage",
+      "Vercel",
+      "GitHub Pages"
+    ],
+    "description": [
+      {
+        "name": "Architecture & Security",
+        "text": "Built a literacy platform using Next.js, Express.js, and MongoDB featuring secure authentication (JWT via httpOnly cookies), Zustand, and TanStack Query (with skeleton loading)."
+      },
+      {
+        "name": "Core Platform Features",
+        "text": "Developed content management features (CRUD posts), reading history, bookmarking system, and user profile management."
+      },
+      {
+        "name": "DevOps & Microservices",
+        "text": "Managed isolated deployments via Docker (Vercel & Render) and prepared a FastAPI microservices migration for Collaborative Filtering & Naive Bayes recommendation features."
+      }
+    ]
+  }
+]

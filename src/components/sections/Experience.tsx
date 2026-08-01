@@ -33,12 +33,14 @@ export function ExpFormat({ data }: { data: Experience }) {
       </CardHeader>
       <CardContent>
         {data.description.map((list, index) => (
-          <div key={index} className="mb-2 flex gap-1">
-            <RiArrowRightDoubleFill className="w-20" size={20} />
-            <p>
+          <div key={index} className="mb-2 flex">
+            <div>
+              <RiArrowRightDoubleFill size={20} />
+            </div>
+            <div>
               <span className="font-bold">{list.name}: </span>
               <span>{list.text}</span>
-            </p>
+            </div>
           </div>
         ))}
       </CardContent>
