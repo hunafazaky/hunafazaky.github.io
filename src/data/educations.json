@@ -1,0 +1,45 @@
+[
+  {
+    "school": "Universitas Islam Negeri Sunan Gunung Djati",
+    "subject": "Bachelor of Engineering in Informatics/Computer Science",
+    "type": "FORMAL",
+    "date": "2018 – 2025",
+    "score": "GPA 3.36/4.0",
+    "stacks": [
+      "Algorithm",
+      "Data Structure",
+      "Programming Language",
+      "Software Development Live Cycle"
+    ]
+  },
+  {
+    "school": "Coursera",
+    "subject": "Google Sertifikat IT Support",
+    "type": "INFORMAL",
+    "date": "October 2022",
+    "score": "",
+    "stacks": [
+      "Encryption",
+      "DNS",
+      "Cloud Computing",
+      "Linux",
+      "Network Protocol"
+    ]
+  },
+  {
+    "school": "DumbWays",
+    "subject": "DevOps Engineer Certificate",
+    "type": "INFORMAL",
+    "date": "June 2026",
+    "score": "",
+    "stacks": ["Linux", "Virtual Machine", "SSH", "Internet Protocol", "Nginx"]
+  },
+  {
+    "school": "LinkedIn",
+    "subject": "Full-Stack JavaScript Development",
+    "type": "INFORMAL",
+    "date": "March 2026",
+    "score": "",
+    "stacks": ["Node.js", "React.js", "JavaScript Runtime", "Express.js"]
+  }
+]

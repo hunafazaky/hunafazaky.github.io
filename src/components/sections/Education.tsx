@@ -1,18 +1,56 @@
-export function Education() {
+import { SectionTitle } from "../section-title"
+import educationsData from "@/data/educations.json"
+
+interface Education {
+  school: string
+  subject: string
+  type: string
+  date: string
+  score: string
+  stacks: string[]
+}
+
+export function EduFormat({ data }: { data: Education }) {
+  const stackList = data.stacks.join(", ")
   return (
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-      laboriosam placeat magni. A doloremque, optio hic quibusdam cum molestiae,
-      ex quam ipsam ea, voluptatibus deleniti illum eaque sunt! Quis enim odit
-      dicta laboriosam, pariatur dolorum, perferendis minima sit perspiciatis
-      necessitatibus impedit nulla alias harum nesciunt exercitationem nisi
-      eveniet. Harum, impedit autem. Et, veniam. Dolorem provident dignissimos
-      consectetur nesciunt distinctio eos, tempora odit! Sit laboriosam,
-      sapiente hic voluptates repudiandae eius, deleniti, est incidunt odio
-      atque neque dicta omnis dignissimos voluptatum perspiciatis? Maiores
-      labore mollitia, assumenda quod aspernatur nostrum repellat ipsum hic
-      quidem ratione ad ab, eius voluptates repudiandae exercitationem aperiam
-      dolorem.
-    </p>
+    <div className="mb-2">
+      <div className="flex flex-col gap-1">
+        <div>
+          <span className="mr-2 font-bold">{data.school}</span>
+          <span>({data.date})</span>
+        </div>
+        <div className="text-xs">
+          <span className="mr-2">{data.subject}</span>
+          {data.score !== "" && <span>{data.score}</span>}
+        </div>
+        <div className="text-xs opacity-70">{stackList}</div>
+      </div>
+    </div>
+  )
+}
+
+export function Education() {
+  const formalEdu = educationsData.filter((data) => data.type === "FORMAL")
+  const informalEdu = educationsData.filter((data) => data.type === "INFORMAL")
+  return (
+    <div className="mb-8" id="education">
+      <SectionTitle title="education" />
+      <section className="mb-4">
+        <h2 className="bg-primary p-1 text-lg font-bold">Formal Education</h2>
+        <div className="border-l-2 border-primary pt-2 pl-2">
+          {formalEdu.map((data, index) => (
+            <EduFormat key={index} data={data} />
+          ))}
+        </div>
+      </section>
+      <section>
+        <h2 className="bg-primary p-1 text-lg font-bold">Informal Education</h2>
+        <div className="border-l-2 border-primary pt-2 pl-2">
+          {informalEdu.map((data, index) => (
+            <EduFormat key={index} data={data} />
+          ))}
+        </div>
+      </section>
+    </div>
   )
 }
