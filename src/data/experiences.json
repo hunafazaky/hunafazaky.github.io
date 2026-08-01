@@ -1,0 +1,59 @@
+[
+  {
+    "company": "Self-Employed",
+    "role": "Fullstack Engineer",
+    "duration": "January 2022 – Present",
+    "description": [
+      {
+        "name": "Core Fullstack",
+        "text": "Built end-to-end web applications using Next.js, Node.js, Express.js, and MongoDB, focusing on rendering performance and clean architecture."
+      },
+      {
+        "name": "API & State Management",
+        "text": "Designed structured RESTful APIs documented with Swagger UI, and managed centralized state and data fetching via TanStack Query, Zustand, and Next Rewrite."
+      },
+      {
+        "name": "DevOps & Infrastructure",
+        "text": "Configured Docker containerization, CI/CD pipelines (GitHub Actions, Vercel, Netlify, Render), and Linux VM / Nginx staging environments."
+      },
+      {
+        "name": "Security & Monitoring",
+        "text": "Fortified system architecture using JWT Authentication, httpOnly cookies, password hashing, rate limiters, and system logging."
+      }
+    ]
+  },
+  {
+    "company": "PT. Orion Media Solusi",
+    "role": "Frontend Developer (Freelance)",
+    "duration": "June 2021 – January 2022",
+    "description": [
+      {
+        "name": "Frontend & Mapping",
+        "text": "Built pixel-perfect web interfaces using Vue 2 and Vuetify, and integrated interactive location mapping via Leaflet."
+      },
+      {
+        "name": "API & State Management",
+        "text": " Integrated RESTful APIs with Vuex, Vue Router, form validation, 3-tier RBAC protection (User, Admin, Superadmin), and Firebase Storage. "
+      },
+      {
+        "name": "Team Collaboration",
+        "text": "Collaborated within a cross-functional team (UI/UX, PM, Backend) via Agile Methodology to fulfill system requirements on schedule."
+      }
+    ]
+  },
+  {
+    "company": "Timbang Nganggur",
+    "role": "Web Developer (Internship)",
+    "duration": "May 2021 – August 2021",
+    "description": [
+      {
+        "name": "Fullstack Web Dev",
+        "text": "Developed a responsive company profile web application using Laravel,Bootstrap, and MySQL database management."
+      },
+      {
+        "name": "Maintenance & Debugging",
+        "text": "Refactored legacy code to improve long-term code maintainability and resolved critical bugs in the authentication system."
+      }
+    ]
+  }
+]

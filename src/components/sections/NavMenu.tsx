@@ -13,7 +13,7 @@ export function NavMenu() {
       <NavigationMenuList>
         {Array.from({ length: 4 }).map((_, index) => (
           <NavigationMenuItem key={index}>
-            <NavigationMenuLink href="#">Link 1</NavigationMenuLink>
+            <NavigationMenuLink href="#experience">Link 1</NavigationMenuLink>
           </NavigationMenuItem>
         ))}
         <NavigationMenuItem>

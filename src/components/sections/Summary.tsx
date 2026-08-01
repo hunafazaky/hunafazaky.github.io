@@ -1,18 +1,16 @@
+import { SectionTitle } from "../section-title"
+
 export function Summary() {
   return (
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-      laboriosam placeat magni. A doloremque, optio hic quibusdam cum molestiae,
-      ex quam ipsam ea, voluptatibus deleniti illum eaque sunt! Quis enim odit
-      dicta laboriosam, pariatur dolorum, perferendis minima sit perspiciatis
-      necessitatibus impedit nulla alias harum nesciunt exercitationem nisi
-      eveniet. Harum, impedit autem. Et, veniam. Dolorem provident dignissimos
-      consectetur nesciunt distinctio eos, tempora odit! Sit laboriosam,
-      sapiente hic voluptates repudiandae eius, deleniti, est incidunt odio
-      atque neque dicta omnis dignissimos voluptatum perspiciatis? Maiores
-      labore mollitia, assumenda quod aspernatur nostrum repellat ipsum hic
-      quidem ratione ad ab, eius voluptates repudiandae exercitationem aperiam
-      dolorem.
-    </p>
+    <div className="mb-8" id="summary">
+      <SectionTitle title="summary" />
+      <p>
+        A Fullstack Developer specialized in the React and Next.js ecosystem to
+        build modern, responsive, and scalable web applications. Skilled in
+        bridging interactive front-ends with robust back-end architectures using
+        TypeScript and Node.js. Highly committed to writing clean code and
+        optimizing application performance to ensure a seamless user experience.
+      </p>
+    </div>
   )
 }

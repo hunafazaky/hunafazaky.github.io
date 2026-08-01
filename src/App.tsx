@@ -1,24 +1,43 @@
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 import { NavMenu } from "./components/sections/NavMenu"
 import Hero from "./components/sections/Hero"
 import { Summary } from "./components/sections/Summary"
 import { Experience } from "./components/sections/Experience"
 import { Project } from "./components/sections/Project"
-import { Education } from "./components/sections/Education"
+import {Education} from "./components/sections/Education"
 import { Skill } from "./components/sections/Skill"
+import { motion, useScroll } from "motion/react"
+
 export function App() {
+  const { scrollYProgress } = useScroll()
+
   return (
     <>
+      <motion.div
+        id="scroll-indicator"
+        style={{
+          scaleX: scrollYProgress,
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          height: 5,
+          originX: 0,
+          backgroundColor: "var(--primary)",
+        }}
+      />
+
       <header>
-        <nav className="flex w-dvw justify-center border-b-2 border-primary py-4">
+        <nav className="flex w-dvw justify-center border-b-2 border-foreground py-4">
           <NavMenu />
         </nav>
       </header>
+
       <main>
         <section className="hero">
           <Hero />
         </section>
-        <section className="main-content">
+        <section className="main-content py-8 px-4">
           <Summary />
           <Experience />
           <Project />
@@ -26,7 +45,11 @@ export function App() {
           <Skill />
         </section>
       </main>
-      <div className="flex min-h-svh p-6">
+
+      <footer>
+        <p>&copy; 2026 BrandName. All rights reserved.</p>
+      </footer>
+      {/* <div className="flex min-h-svh p-6">
         <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
           <div>
             <h1 className="font-medium">Project ready!</h1>
@@ -38,7 +61,7 @@ export function App() {
             (Press <kbd>d</kbd> to toggle dark mode)
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }

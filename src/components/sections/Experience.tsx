@@ -1,18 +1,59 @@
-export function Experience() {
+import { SectionTitle } from "../section-title"
+import { RiArrowRightDoubleFill } from "@remixicon/react"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  // CardFooter,
+  // CardAction,
+} from "@/components/ui/card"
+import experiencesData from "@/data/experiences.json"
+
+interface Experience {
+  company: string
+  role: string
+  duration: string
+  description: {
+    name: string
+    text: string
+  }[]
+}
+
+export function ExpFormat({ data }: { data: Experience }) {
   return (
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-      laboriosam placeat magni. A doloremque, optio hic quibusdam cum molestiae,
-      ex quam ipsam ea, voluptatibus deleniti illum eaque sunt! Quis enim odit
-      dicta laboriosam, pariatur dolorum, perferendis minima sit perspiciatis
-      necessitatibus impedit nulla alias harum nesciunt exercitationem nisi
-      eveniet. Harum, impedit autem. Et, veniam. Dolorem provident dignissimos
-      consectetur nesciunt distinctio eos, tempora odit! Sit laboriosam,
-      sapiente hic voluptates repudiandae eius, deleniti, est incidunt odio
-      atque neque dicta omnis dignissimos voluptatum perspiciatis? Maiores
-      labore mollitia, assumenda quod aspernatur nostrum repellat ipsum hic
-      quidem ratione ad ab, eius voluptates repudiandae exercitationem aperiam
-      dolorem.
-    </p>
+    <Card className="my-2 border-2 border-foreground">
+      <CardHeader>
+        <CardTitle>{data.company}</CardTitle>
+        <CardDescription className="flex flex-col">
+          <span>{data.role}</span>
+          <span className="italic">{data.duration}</span>
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        {data.description.map((list, index) => (
+          <div key={index} className="mb-2 flex gap-1">
+            <RiArrowRightDoubleFill className="w-20" size={20} />
+            <p>
+              <span className="font-bold">{list.name}: </span>
+              <span>{list.text}</span>
+            </p>
+          </div>
+        ))}
+      </CardContent>
+    </Card>
+  )
+}
+
+export function Experience() {
+  const experiences = experiencesData
+  return (
+    <div className="mb-8" id="experience">
+      <SectionTitle title="experience" />
+      {experiences.map((data, index) => (
+        <ExpFormat key={index} data={data} />
+      ))}
+    </div>
   )
 }
