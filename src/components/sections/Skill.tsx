@@ -1,6 +1,6 @@
 import { SectionTitle } from "../section-title"
 import skillsData from "@/data/skills.json"
-import { Card } from "../ui/card"
+import { Button } from "@/components/ui/button"
 
 export function Skill() {
   const skills = skillsData
@@ -9,9 +9,9 @@ export function Skill() {
       <SectionTitle title="skill" />
       <div className="flex flex-wrap gap-1">
         {skills.map((list, index) => (
-          <Card key={index} className="w-fit border px-2 py-1">
+          <Button key={index} className="border bg-card">
             {list}
-          </Card>
+          </Button>
         ))}
       </div>
     </div>

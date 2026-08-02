@@ -21,7 +21,7 @@ interface Experience {
   }[]
 }
 
-export function ExpFormat({ data }: { data: Experience }) {
+function ExpFormat({ data }: { data: Experience }) {
   return (
     <Card className="my-2 border-2 border-foreground">
       <CardHeader>

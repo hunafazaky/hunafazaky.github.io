@@ -8,7 +8,7 @@ import { Education } from "./components/sections/Education"
 import { Skill } from "./components/sections/Skill"
 import { motion, useScroll } from "motion/react"
 
-export function App() {
+export default function App() {
   const { scrollYProgress } = useScroll()
 
   return (
@@ -50,21 +50,6 @@ export function App() {
       <footer className="flex items-center justify-center bg-primary px-4 py-8">
         <p>&copy; 2026 Hunafa Zaky. All rights reserved.</p>
       </footer>
-      {/* <div className="flex min-h-svh p-6">
-        <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-          <div>
-            <h1 className="font-medium">Project ready!</h1>
-            <p>You may now add components and start building.</p>
-            <p>We&apos;ve already added the button component for you.</p>
-            <Button className="mt-2">Button</Button>
-          </div>
-          <div className="font-mono text-xs text-muted-foreground">
-            (Press <kbd>d</kbd> to toggle dark mode)
-          </div>
-        </div>
-      </div> */}
     </>
   )
 }
-
-export default App

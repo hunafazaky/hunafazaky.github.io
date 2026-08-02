@@ -10,7 +10,7 @@ interface Education {
   stacks: string[]
 }
 
-export function EduFormat({ data }: { data: Education }) {
+function EduFormat({ data }: { data: Education }) {
   const stackList = data.stacks.join(", ")
   return (
     <div className="mb-2">

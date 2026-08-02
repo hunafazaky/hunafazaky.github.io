@@ -22,7 +22,7 @@ interface Project {
   }[]
 }
 
-export function ProFormat({ data }: { data: Project }) {
+function ProFormat({ data }: { data: Project }) {
   const stackList = data.stacks.join(", ")
   return (
     <Card className="my-2 border-2 border-foreground">

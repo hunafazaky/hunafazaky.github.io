@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import bgAvif from "/pxArt.avif"
 import bgWebp from "/pxArt.webp"
-import bgJpg from "/pxArt.png"
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0)
@@ -22,7 +21,6 @@ export default function Hero() {
         <source srcSet={bgAvif} type="image/avif" />
         <source srcSet={bgWebp} type="image/webp" />
         <img
-          src={bgJpg}
           alt="Workspace Setup"
           className="h-full w-full object-cover object-center"
         />
