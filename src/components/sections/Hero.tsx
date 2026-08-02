@@ -4,34 +4,20 @@ import bgWebp from "/pxArt.webp"
 import bgJpg from "/pxArt.png"
 
 export default function Hero() {
-  // 1. Buat state untuk menyimpan nilai scroll
   const [scrollY, setScrollY] = useState(0)
-
-  // 2. Pasang event listener saat komponen di-mount
   useEffect(() => {
     const handleScroll = () => {
-      // Menyimpan posisi scroll saat ini dalam satuan pixel
       setScrollY(window.scrollY)
     }
-
-    // passive: true sangat penting agar tidak mengganggu performa scroll (smooth scrolling)
     window.addEventListener("scroll", handleScroll, { passive: true })
-
-    // Bersihkan listener saat komponen di-unmount
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
-
-  // 3. Kalkulasi efek berdasarkan nilai scroll
-  // Nilai 600 adalah jarak pixel kira-kira untuk efek memudar penuh (bisa disesuaikan)
-
-  // Opacity teks: Mulai dari 1 (penuh), perlahan jadi 0 (menghilang)
   const textOpacity = Math.max(1 - scrollY / 400, 0)
 
-  // Kegelapan overlay: Mulai dari 0.4 (agak gelap), perlahan jadi 0.9 (sangat gelap/redup)
-  const overlayDarkness = Math.min(0.4 + scrollY / 600, 0.9)
+  const overlayDarkness = Math.min(0.4 + scrollY / 600, 1)
 
   return (
-    <section className="font-pixel sticky top-0 -z-10 flex h-screen w-full items-center justify-center overflow-hidden p-6">
+    <section className="sticky top-0 -z-10 flex h-screen w-full items-center justify-center overflow-hidden p-6">
       <picture className="absolute inset-0 z-0">
         <source srcSet={bgAvif} type="image/avif" />
         <source srcSet={bgWebp} type="image/webp" />
@@ -42,35 +28,29 @@ export default function Hero() {
         />
       </picture>
 
-      {/* Overlay Gelap Dinamis */}
       <div
         className="absolute inset-0 z-10 dark:bg-background"
-        style={{ opacity: overlayDarkness }} // Menggunakan inline style untuk nilai dinamis
-      ></div>
+        style={{ opacity: overlayDarkness }}
+      />
 
-      {/* Teks Hero Dinamis */}
       <div
-        className="relative z-20 text-center text-white"
+        className="relative z-20 text-center text-foreground"
         style={{
           opacity: textOpacity,
-          // Bonus efek parallax tambahan: teks sedikit ikut turun ke bawah saat discroll
-          transform: `translateY(${scrollY * 0.3}px)`,
+          transform: `translateY(${scrollY * 0.5}px)`,
         }}
       >
-        <h1>Hunafa Zaky</h1>
-        <h5 className="text-brand-rise flex items-center justify-center gap-1">
-          <svg width="15" height="15" viewBox="0 0 100 100">
+        <h1 className="text-7xl font-semibold">Hunafa Zaky</h1>
+        <h5 className="mb-2 flex items-center justify-center gap-1 border-b-2 border-foreground pb-2 text-3xl">
+          <svg width="30" height="30" viewBox="0 0 100 100">
             <polygon points="20,10 80,50 20,90" fill="#ffc55a" />
           </svg>
           Fullstack Developer
-          <svg width="15" height="15" viewBox="0 0 100 100">
+          <svg width="30" height="30" viewBox="0 0 100 100">
             <polygon points="80,10 20,50 80,90" fill="#ffc55a" />
           </svg>
         </h5>
-        <h6>
-          Builds Web Apps with high-precision design, clean and maintainable
-          code
-        </h6>
+        <h6 className="text-xl">Next.js, Express.js, Docker</h6>
       </div>
     </section>
   )
