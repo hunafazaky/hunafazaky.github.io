@@ -5,13 +5,13 @@ import { Button } from "@/components/ui/button"
 export function Skill() {
   const skills = skillsData
   return (
-    <div className="mb-8 pt-18" id="skill">
+    <div className="mb-8 pt-24" id="skill">
       <SectionTitle title="skill" />
-      <div className="flex flex-wrap gap-1">
+      <div className="flex flex-wrap gap-2">
         {skills.map((list, index) => (
           <Button
             key={index}
-            className="border border-foreground bg-card text-card-foreground"
+            className="pixel-corners border bg-card text-foreground shadow-foreground transition-transform hover:-translate-y-0.5"
           >
             {list}
           </Button>

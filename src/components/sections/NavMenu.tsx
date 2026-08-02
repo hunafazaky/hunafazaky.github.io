@@ -33,15 +33,20 @@ export function NavMenu() {
         <NavigationMenuList className="hidden gap-1 sm:flex">
           {menus.map((menu, index) => (
             <NavigationMenuItem key={index}>
-              <NavigationMenuLink className="capitalize" href={`#${menu}`}>
-                {menu}
+              <NavigationMenuLink
+                className="group/nav-link font-pixel text-xl tracking-wider capitalize"
+                href={`#${menu}`}
+              >
+                <span className="border-b-2 border-transparent pb-0.5 transition-colors group-hover/nav-link:border-primary">
+                  {menu}
+                </span>
               </NavigationMenuLink>
             </NavigationMenuItem>
           ))}
         </NavigationMenuList>
       </NavigationMenu>
 
-      <div className="flex items-center gap-1 sm:px-8">
+      <div className="flex items-center gap-1 sm:mx-8">
         <Button
           variant="ghost"
           size="icon"
@@ -65,12 +70,12 @@ export function NavMenu() {
 
       {/* Mobile menu panel */}
       {open && (
-        <div className="absolute top-full right-0 left-0 z-30 flex flex-col border-t-4 border-primary bg-background sm:hidden">
+        <div className="animate-in absolute top-full right-0 left-0 z-30 flex flex-col border-t-4 border-primary bg-background fade-in slide-in-from-top-2 duration-200 sm:hidden">
           {menus.map((menu, index) => (
             <a
               key={index}
               href={`#${menu}`}
-              className="border-b border-border px-4 py-3 text-sm font-medium capitalize hover:bg-muted"
+              className="border-b border-border px-4 py-3 font-pixel text-base tracking-wider capitalize hover:bg-muted"
               onClick={() => setOpen(false)}
             >
               {menu}

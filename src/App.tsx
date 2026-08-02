@@ -13,20 +13,13 @@ export default function App() {
 
   return (
     <>
-      <motion.div
-        id="scroll-indicator"
-        className="z-20"
-        style={{
-          scaleX: scrollYProgress,
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          height: 4,
-          originX: 0,
-          backgroundColor: "var(--primary)",
-        }}
-      />
+      {/* Pixel/XP-bar styled scroll progress indicator */}
+      <div className="fixed top-0 right-0 left-0 z-20 h-1.5 bg-muted">
+        <motion.div
+          className="h-full origin-left bg-[repeating-linear-gradient(90deg,var(--primary)_0px,var(--primary)_6px,color-mix(in_oklch,var(--primary),white_25%)_6px,color-mix(in_oklch,var(--primary),white_25%)_8px)]"
+          style={{ scaleX: scrollYProgress }}
+        />
+      </div>
 
       <header className="sticky top-0 z-10 border-b-4 border-primary">
         <nav className="flex w-dvw justify-between bg-background p-4">
@@ -47,8 +40,17 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="flex items-center justify-center bg-primary px-4 py-8">
-        <p>&copy; {new Date().getFullYear()} Hunafa Zaky. All rights reserved.</p>
+      <footer className="pixel-divider-wrap relative">
+        <div className="pixel-divider" />
+        <div className="flex flex-col items-center justify-center gap-2 bg-primary px-4 py-10 text-primary-foreground">
+          <p className="font-pixel text-xs tracking-widest uppercase">
+            Thanks for visiting
+            <span className="pixel-cursor">_</span>
+          </p>
+          <p className="text-sm">
+            &copy; {new Date().getFullYear()} Hunafa Zaky. All rights reserved.
+          </p>
+        </div>
       </footer>
     </>
   )

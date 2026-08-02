@@ -1,7 +1,15 @@
+import { motion } from "motion/react"
+
 export function SectionTitle({ title }: { title: string }) {
   return (
-    <h2 className="my-2 bg-amber-500 p-2 text-2xl font-bold uppercase">
+    <motion.h2
+      initial={{ opacity: 0, x: -24 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, amount: 0.6 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+      className="pixel-corners my-2 inline-block bg-primary px-3 py-2 font-pixel text-2xl tracking-wider text-primary-foreground uppercase sm:text-4xl"
+    >
       {title}
-    </h2>
+    </motion.h2>
   )
 }

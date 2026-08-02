@@ -33,7 +33,7 @@ export function Education() {
   const formalEdu = educationsData.filter((data) => data.type === "FORMAL")
   const informalEdu = educationsData.filter((data) => data.type === "INFORMAL")
   return (
-    <div className="mb-8 pt-18" id="education">
+    <div className="mb-8 pt-24" id="education">
       <SectionTitle title="education" />
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <section>

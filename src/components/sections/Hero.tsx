@@ -13,11 +13,12 @@ export default function Hero() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
   const textOpacity = Math.max(1 - scrollY / 400, 0)
+  const cueOpacity = Math.max(1 - scrollY / 120, 0)
 
   const overlayDarkness = Math.min(0.4 + scrollY / 600, 1)
 
   return (
-    <section className="sticky top-0 -z-10 flex h-screen w-full items-center justify-center overflow-hidden p-6">
+    <section className="pixel-scanlines sticky top-0 -z-10 flex h-screen w-full items-center justify-center overflow-hidden p-6">
       <picture className="absolute inset-0 z-0">
         <source srcSet={bgAvif} type="image/avif" />
         <source srcSet={bgWebp} type="image/webp" />
@@ -33,30 +34,54 @@ export default function Hero() {
       </picture>
 
       <div
-        className="absolute inset-0 z-10 dark:bg-background"
+        className="absolute inset-0 z-10 bg-background"
         style={{ opacity: overlayDarkness }}
       />
 
       <div
-        className="relative z-20 text-center text-foreground"
+        className="relative z-20 animate-in text-center text-foreground duration-700 fade-in slide-in-from-bottom-4"
         style={{
           opacity: textOpacity,
           transform: `translateY(${scrollY * 0.5}px)`,
         }}
       >
-        <h1 className="text-4xl font-semibold sm:text-5xl md:text-7xl">
+        <h1 className="pixel-shadow font-pixel text-6xl leading-relaxed sm:text-8xl md:text-9xl">
           Hunafa Zaky
         </h1>
-        <h5 className="mb-2 flex items-center justify-center gap-1 border-b-2 border-foreground pb-2 text-lg sm:text-2xl md:text-3xl">
-          <svg width="30" height="30" viewBox="0 0 100 100">
+        <h5 className="mb-2 flex items-center justify-center gap-1 border-b-4 dark:border-b-2 border-foreground pb-2 text-lg sm:text-2xl md:text-3xl font-bold dark:font-medium">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 100 100"
+            className="pixel-float"
+          >
             <polygon points="20,10 80,50 20,90" fill="#ffc55a" />
           </svg>
           Fullstack Developer
-          <svg width="30" height="30" viewBox="0 0 100 100">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 100 100"
+            className="pixel-float"
+            style={{ animationDelay: "0.3s" }}
+          >
             <polygon points="80,10 20,50 80,90" fill="#ffc55a" />
           </svg>
         </h5>
-        <h6 className="text-base sm:text-xl">Next.js, Express.js, Docker</h6>
+        <h6 className="text-base sm:text-xl font-bold dark:font-medium">Next.js, Express.js, Docker</h6>
+      </div>
+
+      <div
+        className="absolute bottom-6 left-1/2 z-20 -translate-x-1/2 animate-in text-center text-foreground duration-700 fade-in"
+        style={{
+          opacity: cueOpacity,
+          animationDelay: "0.8s",
+          animationFillMode: "backwards",
+        }}
+      >
+        <p className="font-pixel text-sm tracking-widest uppercase">
+          Scroll<span className="pixel-cursor">_</span>
+        </p>
       </div>
     </section>
   )

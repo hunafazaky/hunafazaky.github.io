@@ -58,7 +58,7 @@ export function Project() {
   const projects = projectsData
 
   return (
-    <div className="mb-8 pt-18" id="project">
+    <div className="mb-8 pt-24" id="project">
       <SectionTitle title="project" />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {projects.map((data, index) => (
