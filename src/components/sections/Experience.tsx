@@ -23,7 +23,7 @@ interface Experience {
 
 function ExpFormat({ data }: { data: Experience }) {
   return (
-    <Card className="my-2 border-2 border-foreground">
+    <Card className="border-2 border-foreground">
       <CardHeader>
         <CardTitle>{data.company}</CardTitle>
         <CardDescription className="flex flex-col">
@@ -53,9 +53,11 @@ export function Experience() {
   return (
     <div className="mb-8 pt-18" id="experience">
       <SectionTitle title="experience" />
-      {experiences.map((data, index) => (
-        <ExpFormat key={index} data={data} />
-      ))}
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        {experiences.map((data, index) => (
+          <ExpFormat key={index} data={data} />
+        ))}
+      </div>
     </div>
   )
 }

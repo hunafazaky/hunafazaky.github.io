@@ -35,26 +35,28 @@ export function Education() {
   return (
     <div className="mb-8 pt-18" id="education">
       <SectionTitle title="education" />
-      <section className="mb-4">
-        <h2 className="bg-primary px-2 py-1 text-lg font-bold">
-          Formal Education
-        </h2>
-        <div className="border-l-2 border-primary pt-2 pl-2">
-          {formalEdu.map((data, index) => (
-            <EduFormat key={index} data={data} />
-          ))}
-        </div>
-      </section>
-      <section>
-        <h2 className="bg-primary px-2 py-1 text-lg font-bold">
-          Informal Education
-        </h2>
-        <div className="border-l-2 border-primary pt-2 pl-2">
-          {informalEdu.map((data, index) => (
-            <EduFormat key={index} data={data} />
-          ))}
-        </div>
-      </section>
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <section>
+          <h2 className="bg-primary px-2 py-1 text-lg font-bold">
+            Formal Education
+          </h2>
+          <div className="border-l-2 border-primary pt-2 pl-2">
+            {formalEdu.map((data, index) => (
+              <EduFormat key={index} data={data} />
+            ))}
+          </div>
+        </section>
+        <section>
+          <h2 className="bg-primary px-2 py-1 text-lg font-bold">
+            Informal Education
+          </h2>
+          <div className="border-l-2 border-primary pt-2 pl-2">
+            {informalEdu.map((data, index) => (
+              <EduFormat key={index} data={data} />
+            ))}
+          </div>
+        </section>
+      </div>
     </div>
   )
 }

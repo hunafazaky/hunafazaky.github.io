@@ -6,10 +6,9 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-  // CardFooter,
-  // CardAction,
 } from "@/components/ui/card"
 import projectsData from "@/data/projects.json"
+import placeholderImg from "/pxArt.jpg"
 
 interface Project {
   title: string
@@ -25,9 +24,15 @@ interface Project {
 function ProFormat({ data }: { data: Project }) {
   const stackList = data.stacks.join(", ")
   return (
-    <Card className="my-2 border-2 border-foreground">
+    <Card className="border-2 border-foreground">
+      <img
+        src={data.imageUrl ? data.imageUrl : placeholderImg}
+        alt={`${data.title} preview`}
+        loading="lazy"
+        className="aspect-video w-full object-cover"
+      />
       <CardHeader>
-        <a href={data.liveUrl} target="_blank">
+        <a href={data.liveUrl} target="_blank" rel="noopener noreferrer">
           <CardTitle className="hover:text-destructive">{data.title}</CardTitle>
         </a>
         <CardDescription>{stackList}</CardDescription>
@@ -55,9 +60,11 @@ export function Project() {
   return (
     <div className="mb-8 pt-18" id="project">
       <SectionTitle title="project" />
-      {projects.map((data, index) => (
-        <ProFormat key={index} data={data} />
-      ))}
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        {projects.map((data, index) => (
+          <ProFormat key={index} data={data} />
+        ))}
+      </div>
     </div>
   )
 }

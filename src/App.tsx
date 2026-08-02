@@ -38,7 +38,7 @@ export default function App() {
         <section className="hero">
           <Hero />
         </section>
-        <section className="main-content px-4 py-8">
+        <section className="main-content mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
           <Summary />
           <Experience />
           <Project />
@@ -48,7 +48,7 @@ export default function App() {
       </main>
 
       <footer className="flex items-center justify-center bg-primary px-4 py-8">
-        <p>&copy; 2026 Hunafa Zaky. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Hunafa Zaky. All rights reserved.</p>
       </footer>
     </>
   )

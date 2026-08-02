@@ -2,7 +2,7 @@
   {
     "title": "Reading Platform",
     "liveUrl": "https://hz-reading-platform.vercel.app/",
-    "imageUrl": "@/src/assets/react.svg",
+    "imageUrl": "/reading-platform-auth.png",
     "stacks": [
       "Next.js",
       "Shadcn",

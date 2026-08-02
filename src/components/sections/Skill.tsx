@@ -9,7 +9,10 @@ export function Skill() {
       <SectionTitle title="skill" />
       <div className="flex flex-wrap gap-1">
         {skills.map((list, index) => (
-          <Button key={index} className="border bg-card">
+          <Button
+            key={index}
+            className="border border-foreground bg-card text-card-foreground"
+          >
             {list}
           </Button>
         ))}
