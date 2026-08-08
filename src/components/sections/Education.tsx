@@ -1,3 +1,4 @@
+import { motion } from "motion/react"
 import { SectionTitle } from "../section-title"
 import educationsData from "@/data/educations.json"
 
@@ -10,10 +11,16 @@ interface Education {
   stacks: string[]
 }
 
-function EduFormat({ data }: { data: Education }) {
+function EduFormat({ data, index }: { data: Education; index: number }) {
   const stackList = data.stacks.join(", ")
   return (
-    <div className="mb-2">
+    <motion.div
+      initial={{ opacity: 0, x: -16 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: 0.4, ease: "easeOut", delay: index * 0.08 }}
+      className="mb-2"
+    >
       <div className="flex flex-col gap-1">
         <div>
           <span className="mr-1 font-bold">{data.school}</span>
@@ -25,7 +32,7 @@ function EduFormat({ data }: { data: Education }) {
         </div>
         <div className="text-xs opacity-70">{stackList}</div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
@@ -42,7 +49,7 @@ export function Education() {
           </h2>
           <div className="border-l-2 border-primary pt-2 pl-2">
             {formalEdu.map((data, index) => (
-              <EduFormat key={index} data={data} />
+              <EduFormat key={index} data={data} index={index} />
             ))}
           </div>
         </section>
@@ -52,7 +59,7 @@ export function Education() {
           </h2>
           <div className="border-l-2 border-primary pt-2 pl-2">
             {informalEdu.map((data, index) => (
-              <EduFormat key={index} data={data} />
+              <EduFormat key={index} data={data} index={index} />
             ))}
           </div>
         </section>

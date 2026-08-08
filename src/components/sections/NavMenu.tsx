@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "@/components/theme-provider"
+import { cn } from "@/lib/utils"
 import menusData from "@/data/menus.json"
 import {
   RiMenuLine,
@@ -18,6 +19,7 @@ import {
 export function NavMenu() {
   const menus = menusData
   const [open, setOpen] = useState(false)
+  const [active, setActive] = useState<string>("")
   const { theme, setTheme } = useTheme()
 
   const isDark =
@@ -25,6 +27,30 @@ export function NavMenu() {
     (theme === "system" &&
       typeof window !== "undefined" &&
       window.matchMedia("(prefers-color-scheme: dark)").matches)
+
+  // Scrollspy: highlight whichever section sits in the middle band
+  // of the viewport as the user scrolls.
+  useEffect(() => {
+    const sections = menus
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null)
+
+    if (sections.length === 0) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id)
+          }
+        })
+      },
+      { rootMargin: "-45% 0px -45% 0px", threshold: 0 }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+    return () => observer.disconnect()
+  }, [menus])
 
   return (
     <div className="relative flex w-full items-center justify-between">
@@ -37,7 +63,14 @@ export function NavMenu() {
                 className="group/nav-link font-pixel text-xl tracking-wider capitalize"
                 href={`#${menu}`}
               >
-                <span className="border-b-2 border-transparent pb-0.5 transition-colors group-hover/nav-link:border-primary">
+                <span
+                  className={cn(
+                    "border-b-2 pb-0.5 transition-colors group-hover/nav-link:border-primary",
+                    active === menu
+                      ? "border-primary text-primary"
+                      : "border-transparent"
+                  )}
+                >
                   {menu}
                 </span>
               </NavigationMenuLink>
@@ -70,12 +103,15 @@ export function NavMenu() {
 
       {/* Mobile menu panel */}
       {open && (
-        <div className="animate-in absolute top-full right-0 left-0 z-30 flex flex-col border-t-4 border-primary bg-background fade-in slide-in-from-top-2 duration-200 sm:hidden">
+        <div className="absolute top-full right-0 left-0 z-30 flex animate-in flex-col border-t-4 border-primary bg-background duration-200 fade-in slide-in-from-top-2 sm:hidden">
           {menus.map((menu, index) => (
             <a
               key={index}
               href={`#${menu}`}
-              className="border-b border-border px-4 py-3 font-pixel text-base tracking-wider capitalize hover:bg-muted"
+              className={cn(
+                "border-b border-border px-4 py-3 font-pixel text-base tracking-wider capitalize hover:bg-muted",
+                active === menu && "bg-muted text-primary"
+              )}
               onClick={() => setOpen(false)}
             >
               {menu}
