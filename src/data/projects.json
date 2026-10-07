@@ -3,7 +3,7 @@
     "title": "AdaMatsuri",
     "subtitle": "Full Stack Event Discovery & Booking App",
     "liveUrl": "https://adamatsuri.onrender.com",
-    "imageUrl": "",
+    "imageUrl": "/screenshot/adamatsuri.png",
     "stacks": [
       "React",
       "Vite",
@@ -32,7 +32,7 @@
     "title": "BaruKerja",
     "subtitle": "Full Stack Job Board Platform",
     "liveUrl": "https://barukerja.vercel.app",
-    "imageUrl": "",
+    "imageUrl": "/screenshot/barukerja.png",
     "stacks": [
       "Next.js",
       "Tailwind CSS",
@@ -64,7 +64,7 @@
     "title": "BacaKarya",
     "subtitle": "Full Stack Reading & Writing Platform",
     "liveUrl": "https://bacakarya.vercel.app",
-    "imageUrl": "",
+    "imageUrl": "/screenshot/bacakarya.png",
     "stacks": ["Nuxt 4", "Vuetify", "TypeScript", "Pinia", "Tiptap", "SCSS"],
     "description": [
       {

@@ -31,8 +31,9 @@ function ProFormat({ data, index }: { data: Project; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.45, ease: "easeOut", delay: index * 0.1 }}
+      className="h-full"
     >
-      <Card className="border-2 border-foreground">
+      <Card className="h-full border-2 border-foreground">
         <img
           src={data.imageUrl ? data.imageUrl : placeholderImg}
           alt={`${data.title} preview`}
@@ -74,7 +75,7 @@ export function Project() {
   return (
     <div className="mb-8 pt-24" id="project">
       <SectionTitle title="project" />
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((data, index) => (
           <ProFormat key={index} data={data} index={index} />
         ))}

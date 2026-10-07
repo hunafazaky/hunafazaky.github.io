@@ -29,8 +29,9 @@ function ExpFormat({ data, index }: { data: Experience; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.45, ease: "easeOut", delay: index * 0.1 }}
+      className="h-full"
     >
-      <Card className="border-2 border-foreground">
+      <Card className="h-full border-2 border-foreground">
         <CardHeader>
           <CardTitle>{data.company}</CardTitle>
           <CardDescription className="flex flex-col">
