@@ -1,6 +1,6 @@
 import { motion } from "motion/react"
 import { SectionTitle } from "../section-title"
-import { RiArrowRightDoubleFill, RiTrophyLine } from "@remixicon/react"
+import { RiArrowRightDoubleFill } from "@remixicon/react"
 import {
   Card,
   CardContent,
@@ -13,9 +13,9 @@ import placeholderImg from "/pxArt.jpg"
 
 interface Project {
   title: string
+  subtitle: string
   liveUrl: string
   imageUrl: string
-  highlight?: string
   stacks: string[]
   description: {
     name: string
@@ -45,21 +45,12 @@ function ProFormat({ data, index }: { data: Project; index: number }) {
               {data.title}
             </CardTitle>
           </a>
-          <CardDescription>            {stackList}</CardDescription>
+          <CardDescription className="flex flex-col">
+            <span className="font-medium">{data.subtitle}</span>
+            <span>{stackList}</span>
+          </CardDescription>
         </CardHeader>
         <CardContent>
-          {data.highlight && (
-            <div className="pixel-corners mb-3 flex gap-2 border-2 border-primary bg-primary/10 p-3">
-              <RiTrophyLine
-                size={20}
-                className="mt-0.5 shrink-0 text-primary"
-              />
-              <p className="text-sm">
-                <span className="font-bold">Impact: </span>
-                {data.highlight}
-              </p>
-            </div>
-          )}
           {data.description.map((list, i) => (
             <div key={i} className="mb-2 flex">
               <div>

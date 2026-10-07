@@ -1,45 +1,56 @@
 [
   {
-    "school": "Universitas Islam Negeri Sunan Gunung Djati",
-    "subject": "Bachelor of Engineering in Informatics/Computer Science",
+    "school": "UIN Sunan Gunung Djati, Bandung",
+    "subject": "Informatics Engineering (Bachelor)",
     "type": "FORMAL",
-    "date": "2018 – 2025",
-    "score": "GPA 3.36/4.0",
+    "date": "August 2018 – July 2025",
+    "score": "GPA 3.36/4.00",
     "stacks": [
-      "Algorithm",
       "Data Structure",
       "Programming Language",
-      "Software Development Live Cycle"
-    ]
-  },
-  {
-    "school": "Coursera",
-    "subject": "Google Sertifikat IT Support",
-    "type": "INFORMAL",
-    "date": "October 2022",
-    "score": "",
-    "stacks": [
-      "Encryption",
-      "DNS",
-      "Cloud Computing",
-      "Linux",
-      "Network Protocol"
+      "Database System",
+      "Machine Learning",
+      "Software Development Life Cycle"
     ]
   },
   {
     "school": "DumbWays",
-    "subject": "DevOps Engineer Certificate",
+    "subject": "DevOps Engineer",
     "type": "INFORMAL",
-    "date": "June 2026",
+    "date": "June 2026 – Present",
     "score": "",
-    "stacks": ["Linux", "Virtual Machine", "SSH", "Internet Protocol", "Nginx"]
+    "stacks": [
+      "Computer Networking",
+      "Linux",
+      "Firewall",
+      "SSH",
+      "Git",
+      "Nginx",
+      "Web Server"
+    ]
   },
   {
     "school": "LinkedIn",
     "subject": "Full-Stack JavaScript Development",
     "type": "INFORMAL",
-    "date": "March 2026",
+    "date": "March 2026 – Present",
     "score": "",
-    "stacks": ["Node.js", "React.js", "JavaScript Runtime", "Express.js"]
+    "stacks": ["MongoDB", "Node.js", "React.js"]
+  },
+  {
+    "school": "HackerRank",
+    "subject": "JavaScript",
+    "type": "INFORMAL",
+    "date": "March 2026 – Present",
+    "score": "",
+    "stacks": [
+      "Functions",
+      "Currying",
+      "Hoisting",
+      "Scope",
+      "Inheritance",
+      "Events",
+      "Error Handling"
+    ]
   }
 ]

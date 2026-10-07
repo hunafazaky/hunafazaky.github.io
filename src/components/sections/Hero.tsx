@@ -60,7 +60,7 @@ export default function Hero() {
           >
             <polygon points="20,10 80,50 20,90" fill="#ffc55a" />
           </svg>
-          Fullstack Developer
+          Full Stack Developer
           <svg
             width="30"
             height="30"
@@ -72,10 +72,9 @@ export default function Hero() {
           </svg>
         </h5>
         <h6 className="text-base font-bold sm:text-xl dark:font-medium">
-          Next.js, Express.js, Docker
+          JavaScript Stack, DevOps
         </h6>
 
-        {/* TODO: point these at your real resume file and email/contact link. */}
         <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
           <a
             href="/resume-en.pdf"

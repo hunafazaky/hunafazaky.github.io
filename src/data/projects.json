@@ -1,25 +1,87 @@
 [
   {
-    "title": "Reading Platform",
-    "liveUrl": "https://hz-reading-platform.vercel.app/",
-    "imageUrl": "/reading-platform-auth.png",
-    "highlight": "Cut initial page load by ~40% and improved perceived performance by pairing React Context with skeleton loading states.",
+    "title": "AdaMatsuri",
+    "subtitle": "Full Stack Event Discovery & Booking App",
+    "liveUrl": "https://adamatsuri.onrender.com",
+    "imageUrl": "",
     "stacks": [
-      "Next.js (App Router)",
       "React",
+      "Vite",
       "TypeScript",
-      "Tailwind + shadcn/ui",
-      "Node.js / Express / MongoDB backend (separately deployed)",
-      "Cloudflare R2 for file storage"
+      "React Router",
+      "Tailwind CSS",
+      "Golang Gin",
+      "Docker"
     ],
     "description": [
       {
-        "name": "Architecture & Security",
-        "text": "Built a literacy platform using Next.js, Express.js, and MongoDB featuring secure authentication (JWT via httpOnly cookies), capable to refresh token silently and provide skeleton loading to improve perceived performance."
+        "name": "Event Discovery",
+        "text": "Built a single-page application focused on event discovery and ticket booking for the anime community, with live search, categorical filtering, tag chips, and paginated results."
       },
       {
-        "name": "Core Platform Features",
-        "text": "Full CRUD on written works, with ownership-based edit/delete access, Bookmarking with optimistic UI updates, Star ratings, and Cover image and PDF attachment uploads that is connected to a Cloudflare R2 bucket."
+        "name": "Role-Based Access",
+        "text": "Created a role-based access system with protected routes, enabling event organizers to publish and manage their listings through a dedicated dashboard."
+      },
+      {
+        "name": "Booking Flow",
+        "text": "Implemented an attendee reservation flow that authenticates users via phone number to generate booking codes."
+      }
+    ]
+  },
+  {
+    "title": "BaruKerja",
+    "subtitle": "Full Stack Job Board Platform",
+    "liveUrl": "https://barukerja.vercel.app",
+    "imageUrl": "",
+    "stacks": [
+      "Next.js",
+      "Tailwind CSS",
+      "Express.js",
+      "MongoDB",
+      "Cloudflare R2",
+      "Docker"
+    ],
+    "description": [
+      {
+        "name": "Two User Journeys",
+        "text": "Developed a mobile-first job board application for two distinct user journeys: job seekers and employers."
+      },
+      {
+        "name": "Data Fetching",
+        "text": "Engineered a centralized data-fetching architecture using custom hooks to deduplicate reads and protect against stale responses."
+      },
+      {
+        "name": "Secure Auth",
+        "text": "Implemented a server-side proxy layer to manage authentication and refresh token flows securely."
+      },
+      {
+        "name": "REST API",
+        "text": "Designed and built an independent RESTful API using Express.js and MongoDB to handle job logic, user accounts, and secure CV uploads via Cloudflare R2."
+      }
+    ]
+  },
+  {
+    "title": "BacaKarya",
+    "subtitle": "Full Stack Reading & Writing Platform",
+    "liveUrl": "https://bacakarya.vercel.app",
+    "imageUrl": "",
+    "stacks": ["Nuxt 4", "Vuetify", "TypeScript", "Pinia", "Tiptap", "SCSS"],
+    "description": [
+      {
+        "name": "Literary Platform",
+        "text": "Developed a responsive platform allowing users to publish stories, curate reading lists, and discover new content."
+      },
+      {
+        "name": "Rich-Text Editor",
+        "text": "Integrated the Tiptap editor, enabling authors to format and publish stories complete with cover images and metadata."
+      },
+      {
+        "name": "Type-Safe API",
+        "text": "Used OpenAPI-generated interfaces to ensure strict type safety across the application."
+      },
+      {
+        "name": "State & Theming",
+        "text": "Managed user sessions, bookshelf synchronization, and notifications with Pinia, and implemented a custom Light/Dark theme toggle via Vuetify configuration."
       }
     ]
   }

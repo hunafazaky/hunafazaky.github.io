@@ -1,4 +1,3 @@
-// import { Button } from "@/components/ui/button"
 import { NavMenu } from "./components/sections/NavMenu"
 import Hero from "./components/sections/Hero"
 import { Summary } from "./components/sections/Summary"

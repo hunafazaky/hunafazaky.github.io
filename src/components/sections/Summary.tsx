@@ -1,11 +1,10 @@
 import { motion } from "motion/react"
 import { SectionTitle } from "../section-title"
 
-// TODO: replace with your real numbers before publishing.
 const highlights = [
-  { value: "1+", label: "Years Experience" },
-  { value: "2+", label: "Projects Shipped" },
-  { value: "2+", label: "Companies & Clients" },
+  { value: "3+", label: "Years Experience" },
+  { value: "3", label: "Projects Shipped" },
+  { value: "2", label: "Companies" },
 ]
 
 export function Summary() {
@@ -19,11 +18,13 @@ export function Summary() {
         transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
         className="mb-4"
       >
-        A Fullstack Developer specialized in the React and Next.js ecosystem to
-        build modern, responsive, and scalable web applications. Skilled in
-        bridging interactive front-ends with robust back-end architectures using
-        TypeScript and Node.js. Highly committed to writing clean code and
-        optimizing application performance to ensure a seamless user experience.
+        Full Stack Developer with over 3 years of hands-on experience designing
+        and deploying web applications within the JavaScript ecosystem (React,
+        Vue.js, Node.js). Proven ability to architect secure RESTful APIs,
+        manage complex application state, and streamline deployments using
+        Docker and CI/CD pipelines. Passionate about bridging high-performance
+        front-ends with robust Back End architectures to deliver maintainable
+        digital products. Willing to relocate to Bandung, Jakarta, or Bogor.
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 16 }}

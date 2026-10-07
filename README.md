@@ -1,21 +1,20 @@
-# React + TypeScript + Vite + shadcn/ui
+# Hunafa Zaky – Portfolio
 
-This is a template for a new Vite project with React, TypeScript, and shadcn/ui.
+Personal portfolio built with Vite, React, TypeScript, Tailwind CSS v4 and shadcn/ui.
 
-## Adding components
-
-To add components to your app, run the following command:
+## Develop
 
 ```bash
-npx shadcn@latest add button
+pnpm install
+pnpm dev
 ```
 
-This will place the ui components in the `src/components` directory.
+## Build
 
-## Using components
-
-To use the components in your app, import them as follows:
-
-```tsx
-import { Button } from "@/components/ui/button"
+```bash
+pnpm typecheck && pnpm lint && pnpm build
 ```
+
+## Content
+
+All page content lives in `src/data/*.json` (experiences, projects, educations, skills, menus). The downloadable CV is `public/resume-en.pdf`. Pushing to `main` deploys to GitHub Pages via `.github/workflows/deploy.yaml`.
